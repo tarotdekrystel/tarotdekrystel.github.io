@@ -1,7 +1,9 @@
+/* Configuración general, para ajuste de la interfaz, a las dimensiones de la pantalla del dispositivo. */
 * {
   box-sizing: border-box;
 }
 
+/* Configuración de Estilos; para PC's, Laptop's y SmartTV's. */
 header {
   background-color: darkgrey;
   float: center;
@@ -27,6 +29,17 @@ header {
 h1 {
   font-family: Emilys Candi;
   font-size: 40px;
+}
+
+nav {
+  background-color: darkgrey;
+  margin: 2%;
+  border-radius: 5px;
+}
+
+div {
+  margin: 1%;
+  padding: 1%;
 }
 
 section {
