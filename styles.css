@@ -25,3 +25,7 @@ h1 {
     font-family: Emilys Candi;
     font-size: 40px;
 }
+
+section {
+    background-color: darkgrey;
+}
