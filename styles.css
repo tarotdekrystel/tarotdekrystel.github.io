@@ -32,3 +32,15 @@ h1 {
 section {
   background-color: darkgrey;
 }
+
+section.parder {
+  float: left;
+  margin-left: 12%;
+  width: 62%;
+}
+
+section.parizq {
+  float: rigth;
+  margin-rigth: 12%;
+  width: 62%;
+}
