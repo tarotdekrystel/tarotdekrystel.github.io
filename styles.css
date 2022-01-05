@@ -62,7 +62,8 @@ div {
 
 section {
   background-color: darkgrey;
-  margin: 1.1%;
+  margin: 1%;
+  margin-left: 12%;
   padding: 0.5%;
   border-radius: 5px;
   width: 30%;
