@@ -62,6 +62,10 @@ div {
 
 section {
   background-color: darkgrey;
+  margin: 1.1%;
+  padding: 0.5%;
+  border-radius: 5px;
+  width: 30%;
 }
 
 section.parder {
@@ -84,5 +88,6 @@ h1 {
 
 h3 {
   font-family: "Emilys Candi";
+  text-align: center;
   color: purple;
 }
