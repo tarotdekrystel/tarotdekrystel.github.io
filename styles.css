@@ -31,12 +31,6 @@ header {
   width: 12%;
 }
 
-h1 {
-  font-family: "Emilys Candi";
-  font-size: 40px;
-  color: purple;
-}
-
 nav {
   background-color: darkgrey;
   margin: 2%;
@@ -80,4 +74,15 @@ section.parizq {
   float: rigth;
   margin-rigth: 8%;
   width: 28%;
+}
+
+h1 {
+  font-family: "Emilys Candi";
+  font-size: 40px;
+  color: purple;
+}
+
+h3 {
+  font-family: "Emilys Candi";
+  color: purple;
 }
