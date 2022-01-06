@@ -1,4 +1,4 @@
-/* Configuración general, para ajuste de la interfaz, a las dimensiones de la pantalla del dispositivo. */
+/* Configuracion general, para ajuste de la interfaz, a las dimensiones de la pantalla del dispositivo. */
 * {
   box-sizing: border-box;
 }
@@ -55,8 +55,8 @@ nav ul li a:hover {
   padding-left: 5%;
 }
 
-#actual {
-  opacity: 0.6;
+div {
+  margin: 0.5%;
 }
 
 section {
@@ -98,6 +98,10 @@ p {
   text-align: justify;
 }
 
+#actual {
+  opacity: 0.5;
+}
+
 #descripcion {
   margin-left: 22%;
 }
@@ -118,9 +122,19 @@ p {
 #suenos {
   width: 80%;
   margin-left: 10%;
+  margin-top: 7%;
+  margin-bottom: 4%;
 }
 
 #tarot {
   width: 70%;
   margin-left: 15%;
+}
+
+.button {
+  width: 30%;
+  padding: 1%;
+  background-color: purple;
+  color: white;
+  margin-left: 35%;
 }
