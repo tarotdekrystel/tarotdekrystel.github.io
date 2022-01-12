@@ -1,25 +1,3 @@
-/*
-SELECTORES PARA CSS:
-- Selector Global:                                                          *
-- Selector de Etiqueta:                                                     etiqueta
-- Selector de Clase:                                                        .clase
-- Selector de Etiquetas de Clase:                                           etiqueta.clase
-- Selector de ID:                                                           #id
-- Selector de Elemento Anidado:                                             padre hijo
-- Selector de Multiples Etiquetas:                                          etiqueta1, etiqueta2, etiqueta3
-- Selector de Pseudo Clase:                                                 etiqueta:pseudo-clase
-- Selector de Pseudo Elementos:                                             etiqueta::pseudo-elemento
-- Selector de Elementos y Atributo:                                         etiqueta[atributo]
-- Selector de Elementos, Atributo y Valor:                                  etiqueta[atributo="valor"]
-- Selector de Elementos, cuyo Valor de Atributo, contiene una "palabra":    [atributo~="palabra"]
-- Selector de Elememtos, cuyo Valor de Atributo, comienza por "palabra":    [atributo|="palabra"}
-- Selector de Elementos, cuyo Valor de Atributo, comienza por "caracteres": [atributo^="caracteres"]
-- Selector de Elementos, cuyo Valor de Atributo, termina por "caracteres":  [atributo$="caracteres"]
-- Selector de Elementos, cuyo Valor de Atributo, contiene "caracteres":     [atributo*="caracteres"]
-- Selector de Descendentes; ya sean hijos, nietos o mas lejanos:            
-
-*/
-
 body {
   background-image: url(./nebulosa2.webp);
   background-size: 100%;
@@ -66,7 +44,7 @@ p {
 
 .item {
   background-color: darkgrey;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 10px;
   opacity: 0.85;
 }
