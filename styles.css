@@ -123,6 +123,11 @@ p {
   margin-bottom: 40px;
 }
 
+.item-form {
+  grid-column: 21 / 41;
+  padding: 5%;
+}
+
 #actual {
   opacity: 0.5;
 }
