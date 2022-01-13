@@ -13,6 +13,17 @@
     color: purple;
   }
 
+  input, select {
+    float: right;
+    margin-right: 8.6%;
+  }
+
+  label {
+    float: left;
+    margin-right: 7.3%;
+    text-decoration-style: bold;
+  }
+
   p {
     margin-left: 2%;
     margin-right: 2%;
@@ -28,6 +39,13 @@
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 5%;
+  }
+
+  .buttoni, .buttonc, .buttond {
+    float: left;
+    width: 25%;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 
   .container {
@@ -127,8 +145,11 @@
   }
 
   .item-form {
-    grid-column: 3 / 19;
-    padding: 5%;
+    grid-column: 1 / 2;
+    margin-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 3vw;
   }
 
   .menuA {
