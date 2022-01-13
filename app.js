@@ -7,3 +7,8 @@ function menu() {
   }
   return 0;
 }
+
+function formulario() {
+    location.assign("./form.html");
+    return 0;
+}
