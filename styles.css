@@ -16,7 +16,7 @@
   p {
     margin-left: 2%;
     margin-right: 2%;
-    text-align: justify;
+    text-align: left;
   }
 
   .button {
@@ -26,6 +26,7 @@
     color: white;
     font-size: 40px;
     margin-left: 25%;
+    margin-right: 25%;
     margin-bottom: 5%;
   }
 
@@ -41,16 +42,6 @@
     grid-template-rows: repeat(auto-fill, auto);
     gap: 20px;
     row-gap: 50px;
-  }
-
-  .menuA {
-    display: block;
-    width: 100%;
-    font-size: 8vw;
-  }
-
-  .menuC {
-    display: none;
   }
 
   .item {
@@ -142,6 +133,8 @@
 
   .menuA {
     display: block;
+    width: 100%;
+    font-size: 8vw;
   }
 
   .menuC {
@@ -192,7 +185,7 @@
 
   #tarot {
     width: 70%;
-    margin-left: 15%;
+    margin-left: 10%;
   }
 }
 
@@ -221,17 +214,18 @@
   p {
     margin-left: 5%;
     margin-right: 5%;
-    text-align: justify;
+    text-align: left;
   }
 
   .button {
-    width: 30%;
+    width: 50%;
     padding: 1%;
     background-color: purple;
     color: white;
     font-size: 12px;
-    margin-left: 35%;
     margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .container {
@@ -240,21 +234,25 @@
     grid-template-rows: auto;
     gap: 1px;
     row-gap: 5px;
+    place-content: center;
   }
 
   .item {
     background-color: darkgrey;
     border-radius: 10px;
     opacity: 0.85;
+    text-align: center;
   }
 
-  .item h3 a {
+  .item a h3 {
     text-decoration: none;
     color: purple;
-    padding: 1%;
+    padding: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
-  .item h3 a:hover {
+  .item a h3:hover {
     text-decoration: none;
     border: 2px solid purple;
     border-radius: 5px;
@@ -308,7 +306,6 @@
   .item-2-1 {
     grid-column: 9 / 27;
     margin-bottom: 40px;
-    place-content: center;
   }
 
   .item-2-2 {
@@ -360,15 +357,15 @@
     width: 7%;
   }
 
-  #tarot {
-    width: 70%;
-    margin-left: 15%;
-  }
-
   #suenos {
+    float: left;
     width: 80%;
-    margin-left: 10%;
     margin-top: 7%;
     margin-bottom: 4%;
+  }
+
+  #tarot {
+    width: 70%;
+    margin-right: 15%;
   }
 }
