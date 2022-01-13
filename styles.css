@@ -20,12 +20,12 @@
 
   input, select {
     float: right;
-    margin-right: 7%;
+    margin-right: 6.8%;
   }
 
   label {
     float: left;
-    margin-left: 7%;
+    margin-left: 6.8%;
     text-decoration-style: bold;
   }
 
