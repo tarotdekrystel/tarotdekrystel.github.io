@@ -1,4 +1,9 @@
 @media only screen and (min-width: 300px) {
+  form p b {
+    margin-left: 7%;
+    font-size: 3vw;
+  }
+
   h1 {
     font-family: Emilys Candy;
     font-size: 10vw;
@@ -15,12 +20,12 @@
 
   input, select {
     float: right;
-    margin-right: 8.6%;
+    margin-right: 7%;
   }
 
   label {
     float: left;
-    margin-right: 7.3%;
+    margin-left: 7%;
     text-decoration-style: bold;
   }
 
@@ -60,6 +65,20 @@
     grid-template-rows: repeat(auto-fill, auto);
     gap: 20px;
     row-gap: 50px;
+  }
+
+  .enunc {
+    font-size: 4vw;
+  }
+
+  .enunc-1 {
+    text-align: left;
+    margin-left: 3%;
+}
+
+  .enunc-2 {
+    text-align: left;
+
   }
 
   .item {
@@ -163,7 +182,7 @@
   }
 
   #actual {
-    opacity: 0.5;
+    opacity: 0.45;
   }
 
   #caldero {
