@@ -20,12 +20,12 @@
 
   input, select {
     float: right;
-    margin-right: 6.8%;
+    margin-right: 6.6%;
   }
 
   label {
     float: left;
-    margin-left: 6.8%;
+    margin-left: 6.6%;
     text-decoration-style: bold;
   }
 
@@ -73,7 +73,7 @@
 
   .enunc-1 {
     text-align: left;
-    margin-left: 2.5%;
+    margin-left: 2%;
 }
 
   .enunc-2 {
