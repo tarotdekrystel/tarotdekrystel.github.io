@@ -408,6 +408,10 @@
     display: inline;
   }
 
+  .salto {
+    display: none;
+  }
+
   #actual {
     opacity: 0.45;
   }
