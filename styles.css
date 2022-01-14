@@ -93,7 +93,7 @@
     padding: 5%;
   }
 
-  .item h3 a:hover {
+  .item a:hover {
     text-decoration: none;
     border: 2px solid purple;
     border-radius: 5px;
