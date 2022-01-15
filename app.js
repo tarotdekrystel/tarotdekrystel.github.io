@@ -9,7 +9,7 @@
 - cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
 - cookieEditar(): Crear y editar cookies.
 - irAFormulario(): Función del botón "Reservar Cita", para ir a la página de formulario.
-- function menu(): Función para abrir y cerrar el menú de navegación, en la versión móvil.
+- menu(): Función para abrir y cerrar el menú de navegación, en la versión móvil.
 */
 
 // Variables de tarotistas
