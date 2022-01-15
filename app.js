@@ -2,7 +2,7 @@ function cargarFormulario() {
   /* Comprobar si el navegador acepta cookies; en caso contrario, enviar un mensaje de notificación y opción de activarlas. */
   cookieComprobarHabilitado();
   /* Iniciar cookie, para guardar la semana mostrada. */
-  cookieCrear("semana", "0", "", "");
+  cookieEditar("semana", "0", "", "");
   /* Calcular la diferencia horaria, respecto al usuario. */
   calcularDiferencia();
   /* Ajustar los horarios de atención, a la franja horaria del usuario. */
