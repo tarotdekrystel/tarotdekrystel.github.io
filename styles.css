@@ -276,6 +276,17 @@
     text-align: left;
   }
 
+  .boton {
+    width: 50%;
+    padding: 1%;
+    background-color: grey;
+    color: purple;
+    font-size: 12px;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .button {
     width: 50%;
     padding: 1%;
@@ -285,12 +296,6 @@
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .buttoni, .buttonc, .buttond {
-    float: left;
-    width: 25%;
-    margin-left: 7.5%;
   }
 
   .container {
@@ -416,6 +421,12 @@
 
   #actual {
     opacity: 0.45;
+  }
+
+  #botonAnterior, #botonActual, #botonSiguiente {
+    float: left;
+    width: 25%;
+    margin-left: 7.5%;
   }
 
   #caldero {
