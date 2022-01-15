@@ -5,6 +5,7 @@
 - Variables de calendario
 - Variables de hoja de cálculo
 - Variables de cookies y almacenamiento
+- calcularDiferencia(): Función para calcular la diferencia horaria, entre el servidor y el usuario.
 - cargarFormulario(): Función inicial, tras cargar la página de formulario, de comprobaciones y ajustes iniciales.
 - cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
 - cookieEditar(): Crear y editar cookies.
@@ -12,10 +13,10 @@
 - menu(): Función para abrir y cerrar el menú de navegación, en la versión móvil.
 */
 
-// Variables de tarotistas
+// Variables de tarotistas:
 var tarotista = "Krystel";
 
-// Variables de fecha y hora
+// Variables de fecha y hora:
 var fechaUsuarioHoy = new Date();
 var fechaTarotHoy = new Date ();
 var lunes = new Date();
@@ -32,11 +33,11 @@ var hoyMes;
 var hoyDiaMes;
 var hoySemana;
 
-// Variables de calendario
+// Variables de calendario:
 var calendario;
 var eventos;
 
-// Variables de hoja de cálculo.
+// Variables de hoja de cálculo:
 var libro;
 var hoja;
 var rango;
@@ -45,6 +46,19 @@ var rango;
 var cHabil = navigator.cookieEnabled;
 var cookies = document.cookie;
 var cookieSemana;
+
+// Función para calcular la diferencia horaria, entre el servidor y el usuario:
+function calcularDiferencia() {
+  fechaTarotHoy.setFullYear(fechaUsuarioHoy.getFullYear(), fechaUsuarioHoy.getMonth(), fechaUsuarioHoy.getDate());
+  fechaTarotHoy.setHours(fechaUsuarioHoy.getHours() + diferenciaHoras);
+  fechaTarotHoy.setMinutes(fechaUsuarioHoy.getMinutes());
+  fechaTarotHoy.setSeconds(fechaUsuarioHoy.getSeconds());
+  fechaTarotHoy.setMilliseconds(fechaUsuarioHoy.getMilliseconds());
+  hoyAnio = fechaTarotHoy.getFullYear();
+  hoyMes = fechaTarotHoy.getMonth();
+  hoyDiaMes = fechaTarotHoy.getDate();
+  hoySemana = fechaTarotHoy.getDay();
+}
 
 // Función inicial, al cargar la página de formulario:
 function cargarFormulario() {
