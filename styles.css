@@ -335,7 +335,9 @@
     text-decoration: none;
     border: 2px solid purple;
     border-radius: 5px;
-    margin: 0.5%;
+    margin: 0.7%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
   .item-1 {
