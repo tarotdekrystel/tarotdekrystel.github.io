@@ -1,3 +1,17 @@
+/* ÍNDICE:
+   =======
+- Variables de tarotistas
+- Variables de fecha y hora
+- Variables de calendario
+- Variables de hoja de cálculo
+- Variables de cookies y almacenamiento
+- cargarFormulario(): Función inicial, tras cargar la página de formulario, de comprobaciones y ajustes iniciales.
+- cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
+- cookieEditar(): Crear y editar cookies.
+- irAFormulario(): Función del botón "Reservar Cita", para ir a la página de formulario.
+- function menu(): Función para abrir y cerrar el menú de navegación, en la versión móvil.
+*/
+
 // Variables de tarotistas
 var tarotista = "Krystel";
 
@@ -34,18 +48,14 @@ var cookieSemana;
 
 // Función inicial, al cargar la página de formulario:
 function cargarFormulario() {
-  /* Comprobar si el navegador acepta cookies; en caso contrario, enviar un mensaje de notificación y opción de activarlas. */
-  cookieComprobarHabilitado();
-  /* Iniciar cookie, para guardar la semana mostrada. */
-  cookieEditar("semana", "0", "2", "");
-  /* Calcular la diferencia horaria, respecto al usuario. */
-  calcularDiferencia();
-  /* Ajustar los horarios de atención, a la franja horaria del usuario. */
-  ajustarHoras();
-  /* Ajustar los días de la semana inicial, dependiendo de la fecha actual. */
-  ajustarSemanaIni();
-  /* Ajustar las casillas de selección, de la semana inicial, en función de la fecha actual. */
-  ajustarCasillas();
+  cookieComprobarHabilitado(); // Comprobar si el navegador, tiene habilitado el uso de cookies y notificar en caso contrario.
+  if (cHabil == true) { // En caso de estar habilitado el uso de cookies, iniciar una, para registrar la semana que se visualiza.
+    cookieEditar("semana", "0", "2", "");
+  }
+  calcularDiferencia(); // Calcular la diferencia horaria, respecto al usuario.
+  ajustarHoras(); // Ajustar los horarios de atención, a la franja horaria del usuario.
+  ajustarSemanaIni(); // Ajustar los días de la semana inicial, dependiendo de la fecha actual.
+  ajustarCasillas(); // Ajustar en el formulario, las casillas de selección de la semana inicial, en función de la fecha actual.
   return 0;
 }
 
