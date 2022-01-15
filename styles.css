@@ -331,7 +331,7 @@
     margin-right: 2%;
   }
 
-  .item a h3:hover {
+  .item a:hover {
     text-decoration: none;
     border: 2px solid purple;
     border-radius: 5px;
