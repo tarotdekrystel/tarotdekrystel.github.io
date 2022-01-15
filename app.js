@@ -1,10 +1,12 @@
 /* ÍNDICE:
    =======
-- Variables de tarotistas
-- Variables de fecha y hora
-- Variables de calendario
-- Variables de hoja de cálculo
-- Variables de cookies y almacenamiento
+- Variables de tarotistas.
+- Variables de fecha y hora.
+- Variables de calendario.
+- Variables de hoja de cálculo.
+- Variables de cookies y almacenamiento.
+- ajustarHoras(): Función para ajustar los intervalos del formulario, a la franja horaria del usuario.
+- ajustarSemanaIni(): Función para ajustar, las casillas de selección del formulario; a los horarios disponibles, de la semana inicial.
 - calcularDiferencia(): Función para calcular la diferencia horaria, entre el servidor y el usuario.
 - cargarFormulario(): Función inicial, tras cargar la página de formulario, de comprobaciones y ajustes iniciales.
 - cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
@@ -47,6 +49,7 @@ var cHabil = navigator.cookieEnabled;
 var cookies = document.cookie;
 var cookieSemana;
 
+// Función para ajustar los intervalos del formulario, a la franja horaria del usuario:
 function ajustarHoras() {
   var minIni = "";
   var minFin = "";
@@ -99,6 +102,34 @@ function ajustarHoras() {
     }
     var rango = "hora" + i;
     document.getElementsyClassName(rango).outerText(hI + ":" + minIni + "-" + hF + ":" + minFin);
+  }
+}
+
+// Función para ajustar, las casillas de selección del formulario; a los horarios disponibles, de la semana inicial:
+function ajustarSemanaIni() {
+  if (hoySemana == 0) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 1);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 7);
+  } else if (hoySemana == 1) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate());
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 6);
+  } else if (hoySemana == 2) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() - 1);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 5);
+  } else if (hoySemana == 3) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() - 2);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 4);
+  } else if (hoySemana == 4) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() - 3);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 3);
+  } else if (hoySemana == 5) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() - 4);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 2);
+  } else if (hoySemana == 6) {
+    lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() - 5);
+    domingo = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 1);
+  } else {
+    console.log('Error en el ajuste de dias, al cargar la semana actual.');
   }
 }
 
