@@ -47,6 +47,61 @@ var cHabil = navigator.cookieEnabled;
 var cookies = document.cookie;
 var cookieSemana;
 
+function ajustarHoras() {
+  var minIni = "";
+  var minFin = "";
+  var hI;
+  var hF;
+  for (var i = 1; i < 17; i++) {
+    var d = i / 4;
+    var r = i % 4;
+    if (r == 0) {
+      minIni = "45";
+      minFin = "00";
+    } else if (r == 1) {
+      minIni = "00";
+      minFin = "15";
+    } else if (r == 2) {
+      minIni = "15";
+      minFin = "30";
+    } else if (r == 3) {
+      minIni = "30";
+      minFin = "45";
+    } else {
+      Logger.log("Error en el cálculo de minutos del formulario.");
+    }
+    if (d < 1) {
+      hI = hInicio;
+      hF = hInicio;
+    } else if (d == 1) {
+      hI = hInicio;
+      hF = hInicio + 1;
+    } else if (1 < d && d < 2) {
+      hI = hInicio + 1;
+      hF = hInicio + 1;
+    } else if (d == 2) {
+      hI = hInicio + 1;
+      hF = hInicio + 2;
+    } else if (2 < d && d < 3) {
+      hI = hInicio + 2;
+      hF = hInicio + 2;
+    } else if (d == 3) {
+      hI = hInicio + 2;
+      hF = hInicio + 3;
+    } else if (3 < d && d < 4) {
+      hI = hInicio + 3;
+      hF = hInicio + 3;
+    } else if (d == 4) {
+      hI = hInicio + 3;
+      hF = hInicio + 4;
+    } else {
+      console.log("Error en el cálculo de horas del formulario.");
+    }
+    var rango = "hora" + i;
+    document.getElementsyClassName(rango).outerText(hI + ":" + minIni + "-" + hF + ":" + minFin);
+  }
+}
+
 // Función para calcular la diferencia horaria, entre el servidor y el usuario:
 function calcularDiferencia() {
   fechaTarotHoy.setFullYear(fechaUsuarioHoy.getFullYear(), fechaUsuarioHoy.getMonth(), fechaUsuarioHoy.getDate());
