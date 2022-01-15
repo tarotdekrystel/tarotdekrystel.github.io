@@ -32,11 +32,12 @@ var cHabil = navigator.cookieEnabled;
 var cookies = document.cookie;
 var cookieSemana;
 
+// Función inicial, al cargar la página de formulario:
 function cargarFormulario() {
   /* Comprobar si el navegador acepta cookies; en caso contrario, enviar un mensaje de notificación y opción de activarlas. */
   cookieComprobarHabilitado();
   /* Iniciar cookie, para guardar la semana mostrada. */
-  cookieEditar("semana", "0", "", "");
+  cookieEditar("semana", "0", "2", "");
   /* Calcular la diferencia horaria, respecto al usuario. */
   calcularDiferencia();
   /* Ajustar los horarios de atención, a la franja horaria del usuario. */
@@ -48,6 +49,7 @@ function cargarFormulario() {
   return 0;
 }
 
+// Función para comprobar si están habilitadas las cookies, en el navegador del usuario:
 function cookieComprobarHabilitado() {
   if (cHabil == true) {
     return 0;
@@ -57,6 +59,7 @@ function cookieComprobarHabilitado() {
   return 0;
 }
 
+// Función para crear y editar cookies:
 function cookieEditar(cNombre, cValor, cCaduca, cRuta) {
   if (cNombre == "") {
     console.log("Nombre de cookie no definido.");
@@ -66,19 +69,26 @@ function cookieEditar(cNombre, cValor, cCaduca, cRuta) {
     document.cookie = '"' + cNombre + '=' + cValor + '"';
   } else if (cCaduca == "" && cRuta != "") {
     document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + '' + '; path=/' + cRuta + '"';
-  } else if (cCaduca != "" && cRuta == "") {
-    document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '"';
   } else {
-    document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '; path=/' + cRuta + '"';
+    var caduca = new Date();
+    caduca.setTime(getTime() + (cCaduca * 60 * 60 * 1000));
+    cCaduca = caduca.toUTCString();
+    if (cCaduca != "" && cRuta == "") {
+      document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '"';
+    } else {
+      document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '; path=/' + cRuta + '"';
+    }
   }
   return 0;
 }
 
+// Función del botón "Reservar Cita", para ir al formulario.
 function irAFormulario() {
     location.assign("./form.html");
     return 0;
 }
 
+// Función para abrir y cerrar el menú de navegación, en la versión móvil:
 function menu() {
   var menuE = document.getElementById("enlaces").attributes.item("class").value;
   if (menuE == "menuC") {
