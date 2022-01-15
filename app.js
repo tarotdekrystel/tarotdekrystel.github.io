@@ -1,3 +1,37 @@
+// Variables de tarotistas
+var tarotista = "Krystel";
+
+// Variables de fecha y hora
+var fechaUsuarioHoy = new Date();
+var fechaTarotHoy = new Date ();
+var lunes = new Date();
+var domingo = new Date();
+var sigLunes = new Date();
+var sigDomingo = new Date();
+var semana = 0;
+var diferenciaHoraMinutos = fechaUsuarioHoy.getTimezoneOffset();
+var diferenciaHoras = diferenciaHoraMinutos / 60;
+var hInicio = 16 - diferenciaHoras;
+var hFin = 20 - diferenciaHoras;
+var hoyAnio;
+var hoyMes;
+var hoyDiaMes;
+var hoySemana;
+
+// Variables de calendario
+var calendario;
+var eventos;
+
+// Variables de hoja de cálculo.
+var libro;
+var hoja;
+var rango;
+
+// Variables de cookies y almacenamiento:
+var cHabil = navigator.cookieEnabled;
+var cookies = document.cookie;
+var cookieSemana;
+
 function cargarFormulario() {
   /* Comprobar si el navegador acepta cookies; en caso contrario, enviar un mensaje de notificación y opción de activarlas. */
   cookieComprobarHabilitado();
