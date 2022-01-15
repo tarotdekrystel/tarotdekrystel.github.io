@@ -68,7 +68,7 @@ function ajustarHoras() {
       minIni = "30";
       minFin = "45";
     } else {
-      Logger.log("Error en el cálculo de minutos del formulario.");
+      console.log("Error en el cálculo de minutos del formulario.");
     }
     if (d < 1) {
       hI = hInicio;
