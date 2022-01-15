@@ -6,7 +6,7 @@
 - Variables de hoja de cálculo.
 - Variables de cookies y almacenamiento.
 - ajustarHoras(): Función para ajustar los intervalos del formulario, a la franja horaria del usuario.
-- ajustarSemanaIni(): Función para ajustar, las casillas de selección del formulario; a los horarios disponibles, de la semana inicial.
+- ajustarSemanaIni(): Función para ajustar, la ubicación del día de hoy, dentro de la semana inicial.
 - calcularDiferencia(): Función para calcular la diferencia horaria, entre el servidor y el usuario.
 - cargarFormulario(): Función inicial, tras cargar la página de formulario, de comprobaciones y ajustes iniciales.
 - cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
@@ -105,7 +105,7 @@ function ajustarHoras() {
   }
 }
 
-// Función para ajustar, las casillas de selección del formulario; a los horarios disponibles, de la semana inicial:
+// Función para ajustar, la ubicación del día de hoy, dentro de la semana inicial:
 function ajustarSemanaIni() {
   if (hoySemana == 0) {
     lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 1);
