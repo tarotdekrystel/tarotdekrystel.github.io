@@ -164,8 +164,6 @@ function cargarFormulario() {
       document.getElementById("Sueno").setAttribute("checked");
     } else if (servicio == "tarot") {
       document.getElementById("Tarot").setAttribute("checked");
-    } else {
-      continue;
     }
     cookieEditar("semana", "0", "2", "");
   }
