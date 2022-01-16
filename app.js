@@ -192,17 +192,21 @@ function cookieEditar(cNombre, cValor, cCaduca, cRuta) {
   } else if (cValor == "" || cValor == "null") {
     console.log("Valor de cookie no definido.");
   } else if (cCaduca == "" && cRuta == "") {
-    document.cookie = '"' + cNombre + '=' + cValor + '"';
+    galleta = '"' + cNombre + '=' + cValor + '"';
+    document.cookie = encodeURIComponent(galleta);
   } else if (cCaduca == "" && cRuta != "") {
-    document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + '' + '; path=/' + cRuta + '"';
+    galleta = '"' + cNombre + '=' + cValor + '; expires=' + '' + '; path=/' + cRuta + '"';
+    document.cookie = encodeURIComponent(galleta);
   } else {
     var caduca = new Date();
     caduca.setTime(getTime() + (cCaduca * 60 * 60 * 1000));
     cCaduca = caduca.toUTCString();
     if (cCaduca != "" && cRuta == "") {
-      document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '"';
+      galleta = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '"';
+      document.cookie = encodeURIComponent(galleta);
     } else {
-      document.cookie = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '; path=/' + cRuta + '"';
+      galleta = '"' + cNombre + '=' + cValor + '; expires=' + cCaduca + '; path=/' + cRuta + '"';
+      document.cookie = encodeURIComponent(galleta);
     }
   }
   return 0;
