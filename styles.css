@@ -301,7 +301,6 @@
   .container {
     display: grid;
     grid-template-columns: repeat(60, minmax(7px, 1fr));
-    grid-template-rows: repeat(auto-fill, auto);
     gap: 1px;
     row-gap: 30px;
     place-content: center;
