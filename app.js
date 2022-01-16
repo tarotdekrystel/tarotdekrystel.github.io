@@ -6,11 +6,12 @@
 - Variables de hoja de cálculo.
 - Variables de cookies y almacenamiento.
 - ajustarHoras(): Función para ajustar los intervalos del formulario, a la franja horaria del usuario.
-- ajustarSemanaIni(): Función para ajustar, la ubicación del día de hoy, dentro de la semana inicial.
+- ajustarSemanaIni(): Función para ajustar, la ubicación del día de hoy, dentro de la semana inicial; y en caso de ser domingo, mostrar la semana siguiente.
 - calcularDiferencia(): Función para calcular la diferencia horaria, entre el servidor y el usuario.
 - cargarFormulario(): Función inicial, tras cargar la página de formulario, de comprobaciones y ajustes iniciales.
 - cookieComprobarHabilitado(): Comprobar si están habilitadas las cookies, en el navegador del usuario; y en caso contrario, mandar un aviso.
 - cookieEditar(): Crear y editar cookies.
+- cookieLeer(): Función para comprobar, si existe una cookie; y en caso afirmativo, leer su valor.
 - irAFormulario(): Función del botón "Reservar Cita", para ir a la página de formulario.
 - menu(): Función para abrir y cerrar el menú de navegación, en la versión móvil.
 */
@@ -48,6 +49,10 @@ var rango;
 var cHabil = navigator.cookieEnabled;
 var cookies = document.cookie;
 var cookieSemana;
+
+// Función para ajustar en el formulario, las casillas de selección, en función de la semana a visualizar y la fecha actual:
+function ajustarCasillas() {
+}
 
 // Función para ajustar los intervalos del formulario, a la franja horaria del usuario:
 function ajustarHoras() {
@@ -105,7 +110,7 @@ function ajustarHoras() {
   }
 }
 
-// Función para ajustar, la ubicación del día de hoy, dentro de la semana inicial:
+// Función para ajustar, la ubicación del día de "hoy", dentro de la semana inicial; y en caso de ser domingo, mostrar la semana siguiente:
 function ajustarSemanaIni() {
   if (hoySemana == 0) {
     lunes = new Date(fechaTarotHoy.getFullYear(), fechaTarotHoy.getMonth(), fechaTarotHoy.getDate() + 1);
@@ -146,15 +151,28 @@ function calcularDiferencia() {
   hoySemana = fechaTarotHoy.getDay();
 }
 
+// Función para leer en el calendario, los intervalos disponibles y ocupados, de la semana a visualizar.
+function calendarioLeerDisponible() {
+}
+
 // Función inicial, al cargar la página de formulario:
 function cargarFormulario() {
-  cookieComprobarHabilitado(); // Comprobar si el navegador, tiene habilitado el uso de cookies y notificar en caso contrario.
   if (cHabil == true) { // En caso de estar habilitado el uso de cookies, iniciar una, para registrar la semana que se visualiza.
+    var servicio = cookieLeer("servicio");
+    console.log(servicio);
+    if (servicio == "suenos") { // Si se ha guardado la cookie correspondiente, marcar la opción asociada al enlace, desde el que se llamó al formulario.
+      document.getElementById("Sueno").setAttribute("checked");
+    } else if (servicio == "tarot") {
+      document.getElementById("Tarot").setAttribute("checked");
+    } else {
+      continue;
+    }
     cookieEditar("semana", "0", "2", "");
   }
   calcularDiferencia(); // Calcular la diferencia horaria, respecto al usuario.
   ajustarHoras(); // Ajustar los horarios de atención, a la franja horaria del usuario.
   ajustarSemanaIni(); // Ajustar los días de la semana inicial, dependiendo de la fecha actual.
+  calendarioLeerDisponible(); // Lleer en el calendario, los intervalos disponibles y ocupados, de la semana a visualizar; si es la actual, a partir de "mañana".
   ajustarCasillas(); // Ajustar en el formulario, las casillas de selección de la semana inicial, en función de la fecha actual.
   return 0;
 }
@@ -171,9 +189,9 @@ function cookieComprobarHabilitado() {
 
 // Función para crear y editar cookies:
 function cookieEditar(cNombre, cValor, cCaduca, cRuta) {
-  if (cNombre == "") {
+  if (cNombre == "" || cNombre == "null") {
     console.log("Nombre de cookie no definido.");
-  } else if (cValor == "") {
+  } else if (cValor == "" || cValor == "null") {
     console.log("Valor de cookie no definido.");
   } else if (cCaduca == "" && cRuta == "") {
     document.cookie = '"' + cNombre + '=' + cValor + '"';
@@ -192,10 +210,26 @@ function cookieEditar(cNombre, cValor, cCaduca, cRuta) {
   return 0;
 }
 
+// Función para comprobar, si existe una cookie; y en caso afirmativo, leer su valor:
+function cookieLeer(nombreCookie) {
+  var cookies = decodeURIComponent(document.cookie).split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var ck = cookies[i];
+    while (ck.charAt(0) == ' ') {
+      ck = ck.substring(1);
+    }
+    if (ck.indexOf(nombreCookie + '=') == 0) {
+      return ck.substring(nombreCookie.length, ck.length);
+    }
+  }
+  return "";
+}
+
 // Función del botón "Reservar Cita", para ir al formulario.
-function irAFormulario() {
-    location.assign("./form.html");
-    return 0;
+function irAFormulario(servicio) {
+  cookieEditar("servicio", servicio, "2", "");
+  location.assign("./form.html");
+  return 0;
 }
 
 // Función para abrir y cerrar el menú de navegación, en la versión móvil:
