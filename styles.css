@@ -326,6 +326,7 @@
     border-radius: 20px;
     opacity: 0.85;
     text-align: center;
+    margin: 0;
   }
 
   .item a {
