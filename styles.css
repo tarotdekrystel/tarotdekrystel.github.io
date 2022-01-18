@@ -1,7 +1,25 @@
-@media only screen and (min-width: 300px) {
-  form p b {
-    margin-left: 7%;
-    font-size: 3vw;
+@media only screen and (min-width: 300px) and (max-width: 926px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url(./nebulosa2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 1%;
+  }
+
+  form {
+    margin: 0;
+    padding: 0;
+  }
+
+  form p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   h1 {
@@ -20,117 +38,149 @@
 
   input, select {
     float: right;
-    margin-right: 6.4%;
+    margin: 0;
+    padding: 0;
   }
 
   label {
     float: left;
-    margin-left: 6.4%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 10%;
+    margin-bottom: 3%;
     text-decoration-style: bold;
+    font-size: 4vw;
   }
 
   p {
+    margin: 0;
+    margin-top: 3%;
     margin-left: 2%;
     margin-right: 2%;
     text-align: left;
   }
 
-  .button {
+  table {
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+  }
+
+  td {
+    margin: 0;
+    padding-top: 2%;
+  }
+
+  th {
+    text-align: left;
+    margin: 0;
+    padding-top: 2%;
+    font-size: 4vw;
+  }
+
+  tr {
+    margin: 0;
+    padding: 0;
+  }
+
+  .boton {
     width: 50%;
     padding: 1%;
     background-color: purple;
     color: white;
-    font-size: 40px;
+    font-size: 4vw;
+    margin: 0;
     margin-left: 25%;
     margin-right: 25%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
   }
 
-  .buttoni, .buttonc, .buttond {
-    float: left;
-    width: 25%;
-    margin-left: 4%;
-    margin-right: 4%;
+  .boton-1 {
+    margin-top: 3%;
   }
 
-  .container {
-    background-image: url(./nebulosa2.webp);
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+  .boton-enviar {
+    margin-top: 7%;
+  }
+
+  .boton-inactivo {
+    background-color: grey;
+    color: purple;
+  }
+
+  .cont {
     display: grid;
     place-content: center;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fill, auto);
     gap: 20px;
-    row-gap: 50px;
+    row-gap: 25px;
   }
 
-  .enunc {
-    font-size: 4vw;
-  }
-
-  .enunc-1 {
-    text-align: left;
-    margin-left: 2%;
-}
-
-  .enunc-2 {
-    text-align: left;
-  }
-
-  .item {
+  .elem {
     background-color: darkgrey;
     border-radius: 20px;
-    margin: 20px;
     opacity: 0.85;
+    margin: 0;
+    padding: 3%;
   }
 
-  .item a {
+  .elem a {
     text-decoration: none;
-    color: purple;
-    padding: 5%;
   }
 
-  .item a:hover {
-    text-decoration: none;
-    border: 2px solid purple;
-    border-radius: 5px;
-    padding: 1%;
+  .elem h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
   }
 
-  .item-1 {
+  .elem p {
+    color: black;
+  }
+
+  .elem section {
+    border: solid purple 2px;
+    border-radius: 15px;
+    padding: 3%;
+  }
+
+  .elem-cab {
     grid-column: 1 / 2;
     text-align: center;
   }
 
-  .item-2 {
+  .elem-cab p {
+    text-align: center;
+  }
+
+  .elem-nav {
     grid-column: 1 / 2;
     position: sticky;
     top: 0px;
     z-index: +1;
   }
 
-  .item-2 ul {
+  .elem-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     text-align: center;
-    font-size: 50px;
+    font-size: 6vw;
   }
 
-  .item-2 ul li {
+  .elem-nav ul li {
     margin-top: 0.5%;
     margin-bottom: 0.4%;
     margin-left: 1%;
   }
 
-  .item-2 ul li a {
+  .elem-nav ul li a {
     display: block;
     float:none;
-    width: 80%;
+    width: 94%;
     float: left;
     color: purple;
     text-decoration: none;
@@ -140,53 +190,72 @@
     padding-left: 5%;
   }
 
-  .item-2 ul li a:hover {
-    border: 2px solid purple;
+  .elem-nav ul li a:hover {
+    background-color: purple;
+    border: 2px solid white;
+    color: white;
     border-radius: 5px;
     padding-right: 5%;
     padding-left: 5%;
   }
 
-  .item-3 {
-    grid-column: 1 / 2;
-    margin-bottom: 40px;
-  }
-
-  .item-4 {
-    grid-column: 1 / 2;
-    margin-bottom: 40px;
-  }
-
-  .item-5 {
-    grid-column: 1 / 2;
-    margin-bottom: 40px;
-  }
-
-  .item-form {
-    grid-column: 1 / 2;
-    margin-bottom: 40px;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 3vw;
+  .enlaceAncho {
+    display: none;
   }
 
   .menuA {
     display: block;
-    width: 100%;
-    font-size: 8vw;
   }
 
   .menuC {
     display: none;
   }
 
+  .salto {
+    display: none;
+  }
+
+  .semana {
+    width: 100%;
+    float: left;
+    object-fit: contain;
+  }
+
+  .serv-caja, .serv-nombre {
+    margin: 0;
+    padding: 0;
+  }
+
+  .servicio {
+    margin: 0;
+    padding: 0;
+    padding-top: 1%;
+  }
+
+  .servicio th, .servicio td {
+    padding-bottom: 3%;
+  }
+
+  .sinEnlace {
+    display: block;
+  }
+
   #actual {
     opacity: 0.45;
   }
 
+  #botonActual, #botonAnterior, #botonSiguiente {
+    float: left;
+    width: 25%;
+    margin: 0;
+    margin-top: 3%;
+    margin-left: 6.6%;
+    margin-bottom: 1%;
+  }
+
   #caldero {
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
+    object-fit: contain;
   }
 
   #descripcion {
@@ -196,13 +265,13 @@
   #luna {
     float: right;
     margin: 2%;
-    width: 24%;
+    width: 20%;
   }
 
   #menu {
     display: inline-block;
     width: 50%;
-    font-size: 40px;
+    font-size: 4vw;
     margin: 2%;
     margin-left: 25%;
     padding: 1%;
@@ -211,24 +280,27 @@
   #sol {
     float: left;
     margin: 2%;
-    margin-left: 5%;
-    width: 14%;
+    width: 21%;
   }
 
   #suenos {
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    object-fit: contain;
     margin-top: 7%;
     margin-bottom: 4%;
   }
 
   #tarot {
-    width: 70%;
-    margin-left: 10%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
-@media only screen and (min-width: 1079px) {
+@media only screen and (min-width: 927px) {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     background-image: url(./nebulosa2.webp);
     background-size: 100%;
@@ -237,212 +309,375 @@
     padding: 1%;
   }
 
-  form p {
-    text-align: center;
-    font-size: 18px;
-    margin-right: 1%;
-    margin-left: 1%;
-  }
-
   h1 {
     font-family: Emilys Candy;
-    font-size: 40px;
+    font-size: 4vw;
+    text-align: center;
     color: purple;
     opacity: 1;
+    margin: 0;
+    padding: 0;
   }
 
   h3 {
     font-family: Emilys Candy;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-align: center;
     color: purple;
+    opacity: 1;
+  }
+
+  form p {
+    text-align: center;
+    font-size: 2.4vw;
   }
 
   input, select {
     float: right;
-    margin-right: 7%;
+    margin: 0;
+    padding: 0;
+    margin-right: 5%;
+    margin-bottom: 3%;
   }
 
   label {
     float: left;
-    margin-left: 7%;
+    margin: 0;
+    padding: 0;
     text-decoration-style: bold;
-    font-size: 18px;
+    font-size: 1vw;
+    margin-bottom: 5%;
   }
 
   p {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: left;
+    color: black;
+    font-size: 1.2vw;
+  }
+
+  table {
+    width: 100%;
+    object-fit: contain;
+    border-spacing: 1.9vw;
+    margin: 0;
+    padding: 0;
   }
 
   .boton {
     width: 50%;
     padding: 1%;
-    background-color: grey;
-    color: purple;
-    font-size: 12px;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .button {
-    width: 50%;
-    padding: 1%;
     background-color: purple;
     color: white;
-    font-size: 12px;
+    font-size: 1vw;
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: repeat(60, minmax(7px, 1fr));
-    gap: 1px;
-    row-gap: 30px;
-    place-content: center;
-  }
-
-  .enunc {
-    font-size: 20px;
-  }
-
-  .enunc-1 {
-    text-align: left;
-    margin-left: 6.5%;
-  }
-
-  .enunc-2 {
-    text-align: left;
-    margin-right: 30%;
-  }
-
-  .item {
-    background-color: darkgrey;
-    border-radius: 20px;
-    opacity: 0.85;
-    text-align: center;
-    margin: 0;
-  }
-
-  .item a {
-    text-decoration: none;
-    color: purple;
-    margin: 0.7%;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-
-  .item a:hover {
-    text-decoration: none;
-    border: 2px solid purple;
-    border-radius: 5px;
-    margin: 0.7%;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-
-  .item-1 {
-    grid-column: 1 / 61;
-  }
-
-  .item-2 {
-    grid-column: 1 / 61;
-    position: sticky;
-    top: 0px;
-    border-radius: 10px;
-    padding: 0.5%;
-    z-index: +1;
-  }
-
-  .item-2 ul {
-    list-style: none;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .item-2 ul li {
-    display: block;
-    float:left;
-    margin-left: 1%;
-  }
-
-  .item-2 ul li a {
-    color: purple;
-    text-decoration: none;
-    margin-left: 5px;
-    padding-right: 7px;
-    padding-left: 7px;
-  }
-
-  .item-2 ul li a:hover {
-    border: 2px solid purple;
-    border-radius: 5px;
-    padding-right: 7px;
-    padding-left: 7px;
-  }
-
-  .item-2-1 {
-    grid-column: 9 / 27;
-    margin-bottom: 40px;
-    padding: 2%;
-  }
-
-  .item-2-2 {
-    grid-column: 35 / 53;
-    margin-bottom: 40px;
-    padding: 2%;
-  }
-
-  .item-3-2 {
-    grid-column: 22 / 40;
-    margin-bottom: 40px;
-    padding: 2%;
-  }
-
-  .item-form {
-    grid-column: 16 / 45;
-    padding: 0;
-    padding-right: 2%;
-    justify-content: center;
-  }
-
-  .menuA, .menuC {
-    display: inline;
-  }
-
-  .salto {
+  .boton-1 {
     display: none;
   }
 
+  .boton-enviar {
+    width: 30%;
+    float: left;
+    margin-left: 35%;
+  }
+
+  .boton-inactivo {
+    background-color: grey;
+    color: purple;
+  }
+
+  .cajas {
+    width: 65%;
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cajitas {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cajonera {
+    width: 100%;
+  }
+
+  .cont {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(60, minmax(7px, 1fr));
+    column-gap: 1px;
+  }
+
+  .datos {
+    text-align: left;
+  }
+
+  .dias {
+    width: 65%;
+    float: right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    padding-right: 2.2%;
+  }
+
+  .dias label {
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 1.5vw;
+    margin-right: 10.15%;
+    text-align: left;
+  }
+
+  .elem {
+    background-color: darkgrey;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10%;
+    border-radius: 20px;
+    opacity: 0.85;
+  }
+
+  .elem a {
+    text-decoration: none;
+    color: purple;
+    margin: 0;
+    padding: 0;
+  }
+
+  .elem a section {
+    padding: 6%;
+  }
+
+  .elem a section h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7%;
+  }
+
+  .elem a section p {
+    margin: 0;
+    padding: 0;
+    margin-top: 2%;
+  }
+
+  .elem a section:hover {
+    margin: 0;
+    padding: 4%;
+    border: solid purple 2px;
+    border-radius: 15px;
+  }
+
+  .elem-2-i {
+    grid-column: 9 / 27;
+    padding: 3%;
+  }
+
+  .elem-2-d {
+    grid-column: 35 / 53;
+    padding: 3%;
+  }
+
+  .elem-3-c {
+    grid-column: 22 / 40;
+    padding: 6%;
+  }
+
+  .elem-cab {
+    grid-column: 1 / 61;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 2%;
+    text-align: center;
+  }
+
+  .elem-cab h1 {
+    margin-top: 1%;
+  }
+
+  .elem-form {
+    grid-column: 18 / 44;
+    padding: 1%;
+  }
+
+  .elem-form h3 {
+    font-size: 2vw;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  .elem-form section {
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+  }
+
+  .elem-nav {
+    position: sticky;
+    top: 0;
+    grid-column: 1 / 61;
+    margin: 0;
+    padding: 0.8%;
+    padding-left: 1.5%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-content: center;
+    z-index: +1;
+  }
+
+  .elem-nav ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+  }
+
+  .elem-nav ul li {
+    float: left;
+    list-style: none;
+    margin-left: 1.5%;
+  }
+
+  .elem-nav ul li a {
+    color: purple;
+    text-decoration: none;
+    align-self: center;
+    opacity: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 9px;
+  }
+
+  .elem-nav ul li a:hover {
+    border: solid purple 2px;
+    border-radius: 7px;
+    font-size: 1.6vw;
+    margin: 0;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    padding: 4px;
+    object-fit: contain;
+  }
+
+  .enlaceAncho {
+    display: block;
+  }
+
+  .enunc {
+    float: left;
+    text-align: left;
+  }
+
+  .enunc-1 {
+    margin-left: 5%;
+    margin-right: 40%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    font-size: 1.5vw;
+  }
+
+  .enunc-2 {
+    margin-left: 5%;
+    margin-right: 29.5%;
+    margin-bottom: 5%;
+  }
+
+  .enunc-3-1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+    margin-top: 0.6%;
+    margin-bottom: 3%;
+  }
+
+  .enunc-3-2 {
+    float: right;
+    font-size: 1.5vw;
+    margin: 0;
+    margin-top: 0.6%;
+    margin-right: 6.5%;
+    margin-bottom: 15%;
+  }
+
+  .enunc-4 {
+    float: left;
+    margin-top: 0.5%;
+    margin-bottom: 4.5%;
+  }
+
+  .enviar {
+    width: 100%;
+    float: left;
+    object-fit: contain;
+  }
+
+  .horas {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+  }
+
+  .menuA, .menuC {
+    display: block;
+  }
+
+  .servicio {
+    width: 100;
+    object-fit: contain;
+  }
+
+  .serv-caja {
+    float: right;
+  }
+
+  .serv-nombre {
+    float: left;
+  }
+
+  .sinEnlace {
+    display: none;
+  }
+
+  .tithor {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+  }
+
   #actual {
+    color: purple;
+    margin-right: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
     opacity: 0.45;
   }
 
   #botonAnterior, #botonActual, #botonSiguiente {
     float: left;
     width: 25%;
-    margin-left: 7.5%;
+    margin-left: 6.25%;
   }
 
   #caldero {
-    float: left;
-    width: 70%;
-    margin-left: 13%;
-  }
-
-  #descripcion {
-    text-align: center;
+    width: 100%;
+    object-fit: contain;
   }
 
   #luna {
     float: right;
-    margin: 2%;
-    width: 12%;
+    margin-right: 2%;
+    width: 9%;
+    align-self: center;
+    justify-self: right;
   }
 
   #menu {
@@ -451,23 +686,22 @@
 
   #sol {
     float: left;
-    margin: 2%;
-    margin-left: 5%;
-    width: 7%;
+    margin-left: 2%;
+    width: 10%;
+    align-self: center;
+    justify-self: left;
   }
 
   #suenos {
-    float: left;
-    width: 80%;
-    margin-left: 9%;
-    margin-top: 7%;
-    margin-bottom: 18%;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 15%;
+    margin-bottom: 23%;
   }
 
   #tarot {
-    float: left;
-    width: 70%;
-    margin-left: 13%;
-    margin-bottom: 9%;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 5%;
   }
 }
