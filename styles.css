@@ -265,7 +265,7 @@
   #luna {
     float: right;
     margin: 2%;
-    width: 27%;
+    width: 30%;
   }
 
   #menu {
@@ -675,7 +675,7 @@
   #luna {
     float: right;
     margin-right: 2%;
-    width: 9%;
+    width: 13%;
     align-self: center;
     justify-self: right;
   }
@@ -687,7 +687,7 @@
   #sol {
     float: left;
     margin-left: 2%;
-    width: 10%;
+    width: 9%;
     align-self: center;
     justify-self: left;
   }
