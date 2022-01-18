@@ -3,6 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Videncia, magia y espiritualidad.">
+  <meta name="keywords"
+    content="adivina, adivino, adivinación, cartas, futuro, tarot, tarotista, videncia, vidente, sueños, brujería, hechizo, limpieza, magia, mal de ojo, protección, suerte">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="José María Caamaño González">
   <title>TAROT DE KRYSTEL</title>
   <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
   <link rel="icon" type="image/x-icon" href="./Tarot de Krystel.jpg">
@@ -11,187 +16,503 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="item item-1">
-      <img src="sol_transparente.png" alt="Imagen del Sol" id="sol" />
-      <img src="luna_transparente.png" alt="Imagen de la Luna" id="luna" />
-      <h1>TAROT DE KRYSTEL</h1>
-      <p id="descripcion"><b>
-        Tu web de esoterismo; donde encontrarás todo tipo de información, artículos, servicios, cursos...
-      </b></p>
+  <div class="cont">
+    <div class="elem elem-cab">
+      <header>
+        <img src="sol_transparente.png" alt="Imagen del Sol" id="sol" />
+        <img src="luna_transparente.png" alt="Imagen de la Luna" id="luna" />
+        <h1>TAROT DE KRYSTEL</h1>
+        <p><b>Tu web de esoterismo; donde encontrarás todo tipo de información, artículos, servicios, cursos...</b></p>
+      </header>
     </div>
-    <div class="item item-2">
-      <button class="button" id="menu" onclick="menu()"><b>Menú</b></button>
-      <div class="menuC" id="enlaces">
-        <ul><b>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="./servs.html">Servicios</a></li>
-          <li><a href="./building.html">Calendario</a></li>
-          <li><a href="./building.html">Redes</a></li>
-        </b></ul>
-      </div>
+    <div class="elem elem-nav">
+      <nav>
+        <button class="boton" id="menu" onclick="menu()"><b>Menú</b></button>
+        <div class="menuC" id="enlaces">
+          <ul><b>
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="./servs.html">Servicios</a></li>
+              <li><a href="./building.html">Calendario</a></li>
+              <li><a href="./building.html">Redes</a></li>
+            </b></ul>
+        </div>
+      </nav>
     </div>
-    <div class="item item-form">
-      <h3><b>Reserva cita con Krystel</b></h3><br>
-      <form rel="external noreferrer nofollow" action="" target="" method="post" enctype="multipart/form-data" onsubmit="">
-        <label class="enunc enunc-1" for="nombre"><b>Nombre/s</b></label>
-        <input type="text" id="nombre" name="nombre"><br><br class="salto">
-        <label class="enunc enunc-1" for="apellido"><b>Apellido/s</b></label>
-        <input type="text" id="apellido" name="apellido"><br><br class="salto">
-        <label class="enunc enunc-1" for="nacim"><b>Fecha de Nacimiento</b></label>
-        <input type="date" id="nacim" name="nacim"><br><br class="salto">
-        <label class="enunc enunc-1" for="email"><b>Email</b></label>
-        <input type="email" id="email" name="email"><br><br><br class="salto">
-        <label class="enunc enunc-2"><b>Servicio a Reservar</b></label><br><br class="salto">
-        <input type="radio" id="Tarot" name="Servicio" value="1">
-        <label for="Tarot"><b>Consulta de Tarot</b></label><br><br class="salto">
-        <input type="radio" id="Sueno" name="Servicio" value="2">
-        <label for="Sueno"><b>Interpretación de Sueños</b></label><br><br><br class="salto">
-        <label class="enunc enunc-2" for="fechaConsulta"><b>Semana de la Reserva</b></label><br class="salto">
-        <p><b>Formulario en desarrollo</b></p><br class="salto">
-        <button class="boton" id="botonAnterior" type="button" name="anterior" value="Anterior" onclick="semanaAnterior()"><b>Anterior</b></button>
-        <button class="boton" id="botonActual" type="button" name="actual" value="Actual" onclick="semanaActual()"><b>Actual</b></button>
-        <button class="button" id="botonSiguiente" type="button" name="siguiente" value="Siguiente"
-          onclick="semanaSiguiente()"><b>Siguiente</b></button><br><br class="salto">
-        <label class="enunc enunc-2"><b>Tiempo a Reservar</b></label><br><br><br class="salto">
-        <label><b>Desde-Hasta </b></label>
-        <label><b>L. </b></label>
-        <label><b>M. </b></label>
-        <label><b>X. </b></label>
-        <label><b>J. </b></label>
-        <label><b>V. </b></label>
-        <label><b>S. </b></label>
-        <label><b>D. </b></label><br><br class="salto">
-        <label><b class="hora1">17:00-17:15</b></label>
-        <input type="checkbox" id="selec101" name="Dia1" value="1">
-        <input type="checkbox" id="selec201" name="Dia2" value="1">
-        <input type="checkbox" id="selec301" name="Dia3" value="1">
-        <input type="checkbox" id="selec401" name="Dia4" value="1">
-        <input type="checkbox" id="selec501" name="Dia5" value="1">
-        <input type="checkbox" id="selec601" name="Dia6" value="1">
-        <input type="checkbox" id="selec701" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora2">17:15-17:30</b></label>
-        <input type="checkbox" id="selec102" name="Dia1" value="1">
-        <input type="checkbox" id="selec202" name="Dia2" value="1">
-        <input type="checkbox" id="selec302" name="Dia3" value="1">
-        <input type="checkbox" id="selec402" name="Dia4" value="1">
-        <input type="checkbox" id="selec502" name="Dia5" value="1">
-        <input type="checkbox" id="selec602" name="Dia6" value="1">
-        <input type="checkbox" id="selec702" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora3">17:30-17:45</b></label>
-        <input type="checkbox" id="selec103" name="Dia1" value="1">
-        <input type="checkbox" id="selec203" name="Dia2" value="1">
-        <input type="checkbox" id="selec303" name="Dia3" value="1">
-        <input type="checkbox" id="selec403" name="Dia4" value="1">
-        <input type="checkbox" id="selec503" name="Dia5" value="1">
-        <input type="checkbox" id="selec603" name="Dia6" value="1">
-        <input type="checkbox" id="selec703" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora4">17:45-18:00</b></label>
-        <input type="checkbox" id="selec104" name="Dia1" value="1">
-        <input type="checkbox" id="selec204" name="Dia2" value="1">
-        <input type="checkbox" id="selec304" name="Dia3" value="1">
-        <input type="checkbox" id="selec404" name="Dia4" value="1">
-        <input type="checkbox" id="selec504" name="Dia5" value="1">
-        <input type="checkbox" id="selec604" name="Dia6" value="1">
-        <input type="checkbox" id="selec704" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora5">18:00-18:15</b></label>
-        <input type="checkbox" id="selec105" name="Dia1" value="1">
-        <input type="checkbox" id="selec205" name="Dia2" value="1">
-        <input type="checkbox" id="selec305" name="Dia3" value="1">
-        <input type="checkbox" id="selec405" name="Dia4" value="1">
-        <input type="checkbox" id="selec505" name="Dia5" value="1">
-        <input type="checkbox" id="selec605" name="Dia6" value="1">
-        <input type="checkbox" id="selec705" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora6">18:15-18:30</b></label>
-        <input type="checkbox" id="selec106" name="Dia1" value="1">
-        <input type="checkbox" id="selec206" name="Dia2" value="1">
-        <input type="checkbox" id="selec306" name="Dia3" value="1">
-        <input type="checkbox" id="selec406" name="Dia4" value="1">
-        <input type="checkbox" id="selec506" name="Dia5" value="1">
-        <input type="checkbox" id="selec606" name="Dia6" value="1">
-        <input type="checkbox" id="selec706" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora7">18:30-18:45</b></label>
-        <input type="checkbox" id="selec107" name="Dia1" value="1">
-        <input type="checkbox" id="selec207" name="Dia2" value="1">
-        <input type="checkbox" id="selec307" name="Dia3" value="1">
-        <input type="checkbox" id="selec407" name="Dia4" value="1">
-        <input type="checkbox" id="selec507" name="Dia5" value="1">
-        <input type="checkbox" id="selec607" name="Dia6" value="1">
-        <input type="checkbox" id="selec707" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora8">18:45-19:00</b></label>
-        <input type="checkbox" id="selec108" name="Dia1" value="1">
-        <input type="checkbox" id="selec208" name="Dia2" value="1">
-        <input type="checkbox" id="selec308" name="Dia3" value="1">
-        <input type="checkbox" id="selec408" name="Dia4" value="1">
-        <input type="checkbox" id="selec508" name="Dia5" value="1">
-        <input type="checkbox" id="selec608" name="Dia6" value="1">
-        <input type="checkbox" id="selec708" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora9">19:00-19:15</b></label>
-        <input type="checkbox" id="selec109" name="Dia1" value="1">
-        <input type="checkbox" id="selec209" name="Dia2" value="1">
-        <input type="checkbox" id="selec309" name="Dia3" value="1">
-        <input type="checkbox" id="selec409" name="Dia4" value="1">
-        <input type="checkbox" id="selec509" name="Dia5" value="1">
-        <input type="checkbox" id="selec609" name="Dia6" value="1">
-        <input type="checkbox" id="selec709" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora10">19:15-19:30</b></label>
-        <input type="checkbox" id="selec110" name="Dia1" value="1">
-        <input type="checkbox" id="selec210" name="Dia2" value="1">
-        <input type="checkbox" id="selec310" name="Dia3" value="1">
-        <input type="checkbox" id="selec410" name="Dia4" value="1">
-        <input type="checkbox" id="selec510" name="Dia5" value="1">
-        <input type="checkbox" id="selec610" name="Dia6" value="1">
-        <input type="checkbox" id="selec710" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora11">19:30-19:45</b></label>
-        <input type="checkbox" id="selec111" name="Dia1" value="1">
-        <input type="checkbox" id="selec211" name="Dia2" value="1">
-        <input type="checkbox" id="selec311" name="Dia3" value="1">
-        <input type="checkbox" id="selec411" name="Dia4" value="1">
-        <input type="checkbox" id="selec511" name="Dia5" value="1">
-        <input type="checkbox" id="selec611" name="Dia6" value="1">
-        <input type="checkbox" id="selec711" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora12">19:45-20:00</b></label>
-        <input type="checkbox" id="selec112" name="Dia1" value="1">
-        <input type="checkbox" id="selec212" name="Dia2" value="1">
-        <input type="checkbox" id="selec312" name="Dia3" value="1">
-        <input type="checkbox" id="selec412" name="Dia4" value="1">
-        <input type="checkbox" id="selec512" name="Dia5" value="1">
-        <input type="checkbox" id="selec612" name="Dia6" value="1">
-        <input type="checkbox" id="selec712" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora13">20:00-20:15</b></label>
-        <input type="checkbox" id="selec113" name="Dia1" value="1">
-        <input type="checkbox" id="selec213" name="Dia2" value="1">
-        <input type="checkbox" id="selec313" name="Dia3" value="1">
-        <input type="checkbox" id="selec413" name="Dia4" value="1">
-        <input type="checkbox" id="selec513" name="Dia5" value="1">
-        <input type="checkbox" id="selec613" name="Dia6" value="1">
-        <input type="checkbox" id="selec713" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora14">20:15-20:30</b></label>
-        <input type="checkbox" id="selec114" name="Dia1" value="1">
-        <input type="checkbox" id="selec214" name="Dia2" value="1">
-        <input type="checkbox" id="selec314" name="Dia3" value="1">
-        <input type="checkbox" id="selec414" name="Dia4" value="1">
-        <input type="checkbox" id="selec514" name="Dia5" value="1">
-        <input type="checkbox" id="selec614" name="Dia6" value="1">
-        <input type="checkbox" id="selec714" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora15">20:30-20:45</b></label>
-        <input type="checkbox" id="selec115" name="Dia1" value="1">
-        <input type="checkbox" id="selec215" name="Dia2" value="1">
-        <input type="checkbox" id="selec315" name="Dia3" value="1">
-        <input type="checkbox" id="selec415" name="Dia4" value="1">
-        <input type="checkbox" id="selec515" name="Dia5" value="1">
-        <input type="checkbox" id="selec615" name="Dia6" value="1">
-        <input type="checkbox" id="selec715" name="Dia7" value="1"><br><br class="salto">
-        <label><b class="hora16">20:45-21:00</b></label>
-        <input type="checkbox" id="selec116" name="Dia1" value="1">
-        <input type="checkbox" id="selec216" name="Dia2" value="1">
-        <input type="checkbox" id="selec316" name="Dia3" value="1">
-        <input type="checkbox" id="selec416" name="Dia4" value="1">
-        <input type="checkbox" id="selec516" name="Dia5" value="1">
-        <input type="checkbox" id="selec616" name="Dia6" value="1">
-        <input type="checkbox" id="selec716" name="Dia7" value="1"><br><br class="salto"><br class="salto">
-        <button class="button" form="" formaction=""><b>Enviar</b></button>
-      </form>
+    <div class="elem elem-form">
+      <section>
+        <h3><b>Reserva cita con Krystel</b></h3><br class="salto">
+        <form rel="external noreferrer nofollow" action="" target="" method="post" enctype="multipart/form-data" onsubmit="">
+          <label class="enunc enunc-1"><b>DATOS PERSONALES:</b></label><br>
+          <table class="datos">
+            <tr>
+              <th>Nombre/s</th>
+              <td><input type="text" id="nombre" name="nombre"></td>
+            </tr>
+            <tr>
+              <th>Apellido/s</th>
+              <td><input type="text" id="apellido" name="apellido"></td>
+            </tr>
+            <tr>
+              <th>Fecha de Nacimiento</th>
+              <td><input type="date" id="nacim" name="nacim"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td><input type="email" id="email" name="email"></td>
+            </tr>
+          </table>
+          <!--
+                <label class="enunc enunc-1" id="prefijoL" for="prefijoN"><b>País y Prefijo Telefónico</b></label>
+                <select id="prefijoI" name="prefijo">
+                  <option value="ninguno"></option>
+                  <option value="Afgan">Afganistán +93</option>
+                  <option value="Alban">Albania +355</option>
+                  <option value="Alema">Alemania +49</option>
+                  <option value="Angol">Angola +244</option>
+                  <option value="Angui">Anguila +1</option>
+                  <option value="Antig">Antigua y Barbuda +1</option>
+                  <option value="Antil">Antillas Holandesas +599</option>
+                  <option value="Arabi">Arabia Saudita +966</option>
+                  <option value="Argel">Argelia +213</option>
+                  <option value="Argen">Argentina +54</option>
+                  <option value="Armen">Armenia +374</option>
+                  <option value="Aruba">Aruba +297</option>
+                  <option value="Aulia">Australia +61</option>
+                  <option value="Austr">Austria +43</option>
+                  <option value="Azerb">Azerbaiyan +994</option>
+                  <option value="Baham">Bahamas +1</option>
+                  <option value="Bangl">Bangladés +880</option>
+                  <option value="Barba">Barbados +1</option>
+                  <option value="Belgi">Bélgica +32</option>
+                  <option value="Belic">Belice +501</option>
+                  <option value="Benin">Benín +229</option>
+                  <option value="Bermu">Bermudas +1</option>
+                  <option value="Bielo">Bielorrusia +375</option>
+                  <option value="Boliv">Bolivia +591</option>
+                  <option value="Bosni">Bosnia y Herzegovina +387</option>
+                  <option value="Botsu">Botsuana +267</option>
+                  <option value="Brasi">Brasil +55</option>
+                  <option value="Brune">Brunei +673</option>
+                  <option value="Bulga">Bulgaria +359</option>
+                  <option value="Burki">Burkima Faso +226</option>
+                  <option value="Burun">Burundi +257</option>
+                  <option value="Butan">Bután +975</option>
+                  <option value="CaboV">Cabo Verde +238</option>
+                  <option value="Cambo">Camboya +855</option>
+                  <option value="Camer">Camerún +237</option>
+                  <option value="Canad">Canadá +1</option>
+                  <option value="Catar">Catar +974</option>
+                  <option value="Chad">Chad +235</option>
+                  <option value="Chequ">Chequia +420</option>
+                  <option value="Chile">Chile +56</option>
+                  <option value="China">China +86</option>
+                  <option value="Chipr">Chipre +357</option>
+                  <option value="Colom">Colombia +57</option>
+                  <option value="Comor">Comoras +269</option>
+                  <option value="Congo">Congo +242</option>
+                  <option value="CoreS">Corea del Sur +82</option>
+                  <option value="CoreN">Corea del Norte +850</option>
+                  <option value="CostM">Costa de Marfil +225</option>
+                  <option value="CostR">Costa Rica +506</option>
+                  <option value="Croac">Croacia +385</option>
+                  <option value="Cuba">Cuba +53</option>
+                  <option value="Diego">Diego García +246</option>
+                  <option value="Dinam">Dinamarca +45</option>
+                  <option value="Domin">Dominica +1</option>
+                  <option value="Ecuad">Ecuador +593</option>
+                  <option value="Egipt">Egipto +20</option>
+                  <option value="ElSal">El Salvador +503</option>
+                  <option value="Emira">Emiratos Árabes Unidos +971</option>
+                  <option value="Eritr">Eritrea +291</option>
+                  <option value="Escoc">Escocia +44</option>
+                  <option value="Eslva">Eslovaquia +421</option>
+                  <option value="Eslve">Eslovenia +386</option>
+                  <option value="Espan">España +34</option>
+                  <option value="EsUnA">Estados Unidos de América +1</option>
+                  <option value="Eston">Estonia +372</option>
+                  <option value="Etiop">Etiopía +251</option>
+                  <option value="FedRu">Federación Rusa +7</option>
+                  <option value="Filip">Filipinas +63</option>
+                  <option value="Finla">Finlandia +358</option>
+                  <option value="Fiyi">Fiyi +679</option>
+                  <option value="Franc">Francia +33</option>
+                  <option value="Gabon">Gabón +241</option>
+                  <option value="Gales">Gales +44</option>
+                  <option value="Gambi">Gambia +220</option>
+                  <option value="Georg">Georgia +995</option>
+                  <option value="Ghana">Ghana +233</option>
+                  <option value="Gibra">Gibraltar +350</option>
+                  <option value="Grana">Granada +1</option>
+                  <option value="Greci">Grecia +30</option>
+                  <option value="Groen">Groenlandia +299</option>
+                  <option value="Guada">Guadalupe +590</option>
+                  <option value="Guam">Guam +1</option>
+                  <option value="Guate">Guatemala +502</option>
+                  <option value="Guaya">Guayana Francesa +594</option>
+                  <option value="Guine">Guinea +224</option>
+                  <option value="GuiEc">Guinea Ecuatorial +240</option>
+                  <option value="GuiBi">Guinea-Bissau +245</option>
+                  <option value="Guyan">Guyana +592</option>
+                  <option value="Haiti">Haití +509</option>
+                  <option value="Holan">Holanda +31</option>
+                  <option value="Hondu">Honduras +504</option>
+                  <option value="HongK">HongKong +852</option>
+                  <option value="Hungr">Hungría +36</option>
+                  <option value="India">India +91</option>
+                  <option value="Indon">Indonesia +62</option>
+                  <option value="Ingla">Inglaterra +44</option>
+                  <option value="Irak">Irak +964</option>
+                  <option value="Iran">Irán +98</option>
+                  <option value="IrlaS">Irlanda del Sur +353</option>
+                  <option value="IRlaN">Irlanda del Norte +44</option>
+                  <option value="IslAs">Isla Ascensión +247</option>
+                  <option value="IslNo">Isla Norfolk +6723</option>
+                  <option value="Islan">Islandia +354</option>
+                  <option value="IslCa">Islas Caimán +1</option>
+                  <option value="IslCo">Islas Cook +682</option>
+                  <option value="IslFe">Islas Feroe +298</option>
+                  <option value="IslMl">Islas Malvinas +500</option>
+                  <option value="IslMr">Islas Marianas del Norte +1</option>
+                  <option value="IslMs">Islas Marshall +692</option>
+                  <option value="IslSa">Islas Salomón +677</option>
+                  <option value="IslTu">Islas Turcas y Caicos +1</option>
+                  <option value="IslVB">Islas Vírgenes Británicas +1</option>
+                  <option value="IslVE">Islas Vírgenes de los Estados Unidos +1</option>
+                  <option value="Israe">Israel +972</option>
+                  <option value="Itali">Italia +39</option>
+                  <option value="Jamai">Jamaica +1</option>
+                  <option value="Japon">Japón +81</option>
+                  <option value="Jorda">Jordania +962</option>
+                  <option value="Kazaj">Kazajistán +7</option>
+                  <option value="Kenia">Kenia +254</option>
+                  <option value="Kirgu">Kirguistán +996</option>
+                  <option value="Kirib">Kiribati +686</option>
+                  <option value="Kuwai">Kuwait +965</option>
+                  <option value="Laos">Laos +856</option>
+                  <option value="Lesot">Lesoto +266</option>
+                  <option value="Leton">Letonia +371</option>
+                  <option value="Liban">Líbano +961</option>
+                  <option value="Liber">Liberia +231</option>
+                  <option value="Libia">Libia +218</option>
+                  <option value="Liech">Liechtenstein +423</option>
+                  <option value="Litua">Lituania +370</option>
+                  <option value="Luxem">Luxemburgo +352</option>
+                  <option value="Macao">Macao +853</option>
+                  <option value="Maced">Macedonia +389</option>
+                  <option value="Madag">Madagascar +261</option>
+                  <option value="Malas">Malasia +60</option>
+                  <option value="Malau">Malaui +265</option>
+                  <option value="Maldi">Maldivas +960</option>
+                  <option value="Mali">Malí +223</option>
+                  <option value="Malta">Malta +356</option>
+                  <option value="Marru">Marruecos +212</option>
+                  <option value="Marti">Martinica +596</option>
+                  <option value="Mauro">Mauricio +230</option>
+                  <option value="Maura">Mauritania +222</option>
+                  <option value="Mayot">Mayotte +262</option>
+                  <option value="Mexic">México +52</option>
+                  <option value="Micro">Micronesia +691</option>
+                  <option value="Molda">Moldavia +373</option>
+                  <option value="Monac">Mónaco +377</option>
+                  <option value="Mongo">Mongolia +976</option>
+                  <option value="Monte">Montenegro +382</option>
+                  <option value="Monts">Montserrat +1</option>
+                  <option value="Mozam">Mozambique +258</option>
+                  <option value="Myanm">Myanmar +95</option>
+                  <option value="Namib">Namibia +264</option>
+                  <option value="Nauru">Nauru +674</option>
+                  <option value="Nepal">Nepal +977</option>
+                  <option value="Nicar">Nicaragua +505</option>
+                  <option value="Niger">Níger +227</option>
+                  <option value="Nigia">Nigeria +234</option>
+                  <option value="Niue">Niue +683</option>
+                  <option value="Norue">Noruega +47</option>
+                  <option value="NueCa">Nueva Caledonia +687</option>
+                  <option value="NueZe">Nueva Zelanda +64</option>
+                  <option value="Oman">Omán +968</option>
+                  <option value="Pakis">Pakistán +92</option>
+                  <option value="Palao">Palaos +680</option>
+                  <option value="Pales">Palestina +970</option>
+                  <option value="Panam">Panamá +507</option>
+                  <option value="PapNG">Papúa Nueva Guinea +675</option>
+                  <option value="Parag">Paraguay +595</option>
+                  <option value="Peru">Perú +51</option>
+                  <option value="PolFr">Polinesia Francesa +689</option>
+                  <option value="Polon">Polonia +48</option>
+                  <option value="Portu">Portugal +351</option>
+                  <option value="PriAn">Principado de Andorra +376</option>
+                  <option value="PueRi">Puerto Rico +1</option>
+                  <option value="ReiBa">Reino de Bahréin +973</option>
+                  <option value="RepDo">República Dominicana +1</option>
+                  <option value="RepCe">República Centroafricana +236</option>
+                  <option value="RepDC">República Democrática del Congo +243</option>
+                  <option value="Reuni">Reunión +262</option>
+                  <option value="Ruand">Ruanda +250</option>
+                  <option value="Ruman">Rumanía +40</option>
+                  <option value="SahOc">Sáhara Occidental +212</option>
+                  <option value="Samoa">Samoa +685</option>
+                  <option value="SamAm">Samoa Americana +1</option>
+                  <option value="SanBa">San Bartolomé +590</option>
+                  <option value="SanCN">San Cristóbal y Nieves +1</option>
+                  <option value="SanMo">San Marino +378</option>
+                  <option value="SanMn">San Martín +590</option>
+                  <option value="SanPM">San Pedro y Miquelón +508</option>
+                  <option value="SanVG">San Vicente y las Granadinas +1</option>
+                  <option value="StaEl">Santa Elena +290</option>
+                  <option value="StaLu">Santa Lucía +1</option>
+                  <option value="SanTP">Santo Tomé y Príncipe +239</option>
+                  <option value="SatIn">Satélite Inmarsat +870</option>
+                  <option value="SatI1">Satélite Iridium 1 +8816</option>
+                  <option value="SatI2">Satélite Iridium 2 +8817</option>
+                  <option value="SatTh">Satélite Thuraya +88216</option>
+                  <option value="Seneg">Senegal +221</option>
+                  <option value="Serbi">Serbia +381</option>
+                  <option value="Seych">Seychelles +248</option>
+                  <option value="SieLe">Sierra Leona +232</option>
+                  <option value="Singa">Singapur +65</option>
+                  <option value="SinMa">Sint Maarten +1</option>
+                  <option value="Siria">Siria +963</option>
+                  <option value="Somal">Somalia +252</option>
+                  <option value="SriLa">Sri Lanka +94</option>
+                  <option value="Suazi">Suazilandia +268</option>
+                  <option value="Sudaf">Sudáfrica +27</option>
+                  <option value="SudNo">Sudán del Norte +249</option>
+                  <option value="SudSu">Sudán del Sur +211</option>
+                  <option value="Sueci">Suecia +46</option>
+                  <option value="Suiza">Suiza +41</option>
+                  <option value="Surin">Surinam +597</option>
+                  <option value="Taila">Tailandia +66</option>
+                  <option value="Taiwa">Taiwán +886</option>
+                  <option value="Tanza">Tanzania +255</option>
+                  <option value="Tayik">Tayikistán +992</option>
+                  <option value="Timor">Timor Oriental +670</option>
+                  <option value="Togo">Togo +228</option>
+                  <option value="Tokel">Tokelau +690</option>
+                  <option value="Tonga">Tonga +676</option>
+                  <option value="Trini">Trinidad y Tobago +1</option>
+                  <option value="Tunez">Túnez +216</option>
+                  <option value="Turkm">Turkmenistán +993</option>
+                  <option value="Turqu">Turquía +90</option>
+                  <option value="Tuval">Tuvalu +688</option>
+                  <option value="Ucran">Ucrania +380</option>
+                  <option value="Ugand">Uganda +256</option>
+                  <option value="Urugu">Uruguay +598</option>
+                  <option value="Uzbek">Uzbekistán +998</option>
+                  <option value="Vanua">Vanuatu +678</option>
+                  <option value="Vatic">Vaticano +39</option>
+                  <option value="Venez">Venezuela`+58</option>
+                  <option value="Vietn">Vietnam +84</option>
+                  <option value="Walli">Wallis y Futuna +681</option>
+                  <option value="Yemen">Yemen +967</option>
+                  <option value="Yibut">Yibuti +253</option>
+                  <option value="Zambi">Zambia +260</option>
+                  <option value="Zimba">Zimbabue +263</option>
+                </select><br><br>
+                <label class="enunc enunc-1" id="movilL" for="movil"><b>Número de Teléfono Móvil</b></label>
+                <input type="text" id="movil" name="movil"><br><br><br>
+                <label class="enunc enunc-2" id="WL"><b>¿Tienes WhatsApp?</b></label><br><br>
+                <input type="radio" id="WS" name="Whatsapp" value="1">
+                <label id="WSL" for="WS"><b>Sí</b></label><br><br>
+                <input type="radio" id="WN" name="Whatsapp" value="2">
+                <label id="WNL" for="WN"><b>No</b></label><br><br><br>
+        -->
+          <label class="enunc enunc-1"><b>SERVICIO A RESERVAR:</b></label>
+          <table class="servicio">
+            <tr>
+              <th class="serv-nombre">Consulta de Tarot</th>
+              <td class="serv-caja"><input class="caja" type="radio" id="Tarot" name="Servicio" value="1"></td>
+            </tr>
+            <tr>
+              <th class="serv-nombre">Interpretación de Sueños</th>
+              <td class="serv-caja"><input class="caja" type="radio" id="Sueno" name="Servicio" value="2"></td>
+            </tr>
+          </table>
+          <label class="enunc enunc-1" for="fechaConsulta"><b>SEMANA DE LA RESERVA:</b></label><br>
+          <div class="semana"><p><b>Formulario en desarrollo</b></p></div>
+          <button class="boton boton-inactivo" id="botonAnterior" type="button" name="anterior" value="Anterior"
+            onclick="semanaAnterior()"><b>Anterior</b></button>
+          <button class="boton boton-inactivo" id="botonActual" type="button" name="actual" value="Actual"
+            onclick="semanaActual()"><b>Actual</b></button>
+          <button class="boton" id="botonSiguiente" type="button" name="siguiente" value="Siguiente"
+            onclick="semanaSiguiente()"><b>Siguiente</b></button>
+          <label class="enunc enunc-1" id="tiare"><b>TIEMPO A RESERVAR:</b></label><br>
+          <table>
+            <tr>
+              <th class="tithor">De - A</th>
+              <th>L</th>
+              <th>M</th>
+              <th>X</th>
+              <th>J</th>
+              <th>V</th>
+              <th>S</th>
+              <th>D</th>
+            </tr>
+            <tr>
+              <th class="horas">17:00 - 17:15</th>
+              <td class=""><input type="checkbox" id="selec101" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec201" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec301" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec401" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec501" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec601" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec701" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">17:15 - 17:30</th>
+              <td><input type="checkbox" id="selec102" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec202" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec302" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec402" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec502" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec602" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec702" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">17:30 - 17:45</th>
+              <td><input type="checkbox" id="selec103" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec203" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec303" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec403" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec503" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec603" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec703" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">17:45 - 18:00</th>
+              <td><input type="checkbox" id="selec104" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec204" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec304" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec404" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec504" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec604" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec704" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">18:00 - 18:15</th>
+              <td><input type="checkbox" id="selec105" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec205" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec305" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec405" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec505" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec605" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec705" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">18:15 - 18:30</th>
+              <td><input type="checkbox" id="selec106" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec206" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec306" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec406" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec506" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec606" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec706" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">18:30 - 18:45</th>
+              <td><input type="checkbox" id="selec107" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec207" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec307" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec407" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec507" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec607" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec707" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">18:45 - 19:00</th>
+              <td><input type="checkbox" id="selec108" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec208" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec308" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec408" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec508" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec608" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec708" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">19:00 - 19:15</th>
+              <td><input type="checkbox" id="selec109" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec209" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec309" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec409" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec509" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec609" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec709" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">19:15 - 19:30</th>
+              <td><input type="checkbox" id="selec110" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec210" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec310" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec410" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec510" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec610" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec710" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">19:30 - 19:45</th>
+              <td><input type="checkbox" id="selec111" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec211" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec311" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec411" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec511" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec611" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec711" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">19:45 - 20:00</th>
+              <td><input type="checkbox" id="selec112" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec212" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec312" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec412" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec512" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec612" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec712" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">20:00 - 20:15</th>
+              <td><input type="checkbox" id="selec113" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec213" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec313" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec413" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec513" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec613" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec713" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">20:15 - 20:30</th>
+              <td><input type="checkbox" id="selec114" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec214" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec314" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec414" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec514" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec614" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec714" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">20:30 - 20:45</th>
+              <td><input type="checkbox" id="selec115" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec215" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec315" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec415" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec515" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec615" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec715" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas">20:45 - 21:00</th>
+              <td><input type="checkbox" id="selec116" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec216" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec316" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec416" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec516" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec616" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec716" name="Dia7" value="1"></td>
+            </tr>
+          </table>
+          <div class="enviar">
+            <button class="boton boton-enviar" type="button" onclick="enviarForm()" form="" formaction=""><b>Enviar</b></button>
+          </div>
+        </form>
+      </section>
     </div>
   </div>
 </body>
