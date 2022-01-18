@@ -229,7 +229,6 @@ function cookieLeer(nombreCookie) {
 
 // Función del botón "Reservar Cita", para ir al formulario.
 function irAFormulario(servicio) {
-  cookieEditar("servicio", servicio, "2", "");
   location.assign("./form.html");
   return 0;
 }
