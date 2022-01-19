@@ -16,7 +16,7 @@
     padding: 0;
   }
 
-  form p {
+  form div p {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -81,6 +81,12 @@
   }
 
   tr {
+    margin: 0;
+    padding: 0;
+  }
+
+  .aviso {
+    text-align: center;
     margin: 0;
     padding: 0;
   }
@@ -327,7 +333,7 @@
     opacity: 1;
   }
 
-  form p {
+  form div p {
     text-align: center;
     font-size: 2.4vw;
   }
@@ -360,6 +366,11 @@
     border-spacing: 1.9vw;
     margin: 0;
     padding: 0;
+  }
+
+  .aviso {
+    text-align: center;
+    font-size: 2.4vw;
   }
 
   .boton {
