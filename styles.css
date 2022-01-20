@@ -16,7 +16,7 @@
     padding: 0;
   }
 
-  form div p {
+  form p {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -81,12 +81,6 @@
   }
 
   tr {
-    margin: 0;
-    padding: 0;
-  }
-
-  .aviso {
-    text-align: center;
     margin: 0;
     padding: 0;
   }
@@ -161,6 +155,13 @@
     text-align: center;
   }
 
+  .elem-info section h4 {
+    margin: 0;
+    margin-top: 7%;
+    text-align: left;
+    margin-left: 5%;
+  }
+
   .elem-nav {
     grid-column: 1 / 2;
     position: sticky;
@@ -203,6 +204,28 @@
     border-radius: 5px;
     padding-right: 5%;
     padding-left: 5%;
+  }
+
+  .elem-pie {
+    grid-column: 1 / 2;
+    opacity: 0.8;
+  }
+
+  .elem-pie a {
+    display: block;
+    float:none;
+    width: 94%;
+    float: left;
+    color: purple;
+    text-decoration: none;
+    text-align: left;
+    padding: 3%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .elem-pie a:hover {
+    text-decoration: underline;
   }
 
   .enlaceAncho {
@@ -529,12 +552,32 @@
     padding: 0;
   }
 
+  .elem-info {
+    grid-column: 1 / 61;
+    padding: 1%;
+    margin-bottom: 2%;
+  }
+
+  .elem-info section {
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+    padding: 1%;
+    border: solid purple 2px;
+    border-radius: 15px;
+  }
+
+  .elem-info section ul {
+    list-style: none;
+  }
+
   .elem-nav {
+    height: 3.4vw;
     position: sticky;
     top: 0;
     grid-column: 1 / 61;
     margin: 0;
-    padding: 0.8%;
+    padding: 0.8vw;
     padding-left: 1.5%;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -574,6 +617,28 @@
     margin-right: 1.5%;
     padding: 4px;
     object-fit: contain;
+  }
+
+  .elem-pie {
+    grid-column: 1 / 61;
+    margin: 0;
+    padding: 0.8vw;
+    padding-left: 1.5%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-content: center;
+    opacity: 0.8;
+  }
+
+  .elem-pie a {
+    float: left;
+    margin-left: 25%;
+    font-size: 1.2vw;
+    opacity: 1;
+  }
+
+  .elem-pie a:hover {
+    text-decoration: underline;
   }
 
   .enlaceAncho {
