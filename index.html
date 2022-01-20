@@ -15,7 +15,7 @@
   <script src="./app.js"></script>
 </head>
 
-<body>
+<body onload="cookieComprobarHabilitado()">
   <div class="cont">
     <div class="elem elem-cab">
       <header>
@@ -46,7 +46,7 @@
           <p>No te quedes con dudas, resuélvelas durante la consulta.</p>
           <p>Solicita cita previa y reserva el tiempo que necesites.</p>
         </b>
-        <button class="boton boton-1" href="./form.html" onclick="irAFormulario()"><b>Reservar Cita</b></button>
+        <button class="boton boton-1" href="./form.html" onclick="irAFormulario('suenos')"><b>Reservar Cita</b></button>
       </section>
       <a class="enlaceAncho" href="./form.html">
         <section>
@@ -55,6 +55,7 @@
           <p>Tiradas en directo, a través de videollamada.</p>
           <p>No te quedes con dudas, resuélvelas durante la consulta.</p>
           <p>Solicita cita previa y reserva el tiempo que necesites.</p></b>
+          <button class="boton boton-1" href="./form.html" onclick="irAFormulario('suenos')"><b>Reservar Cita</b></button>
         </section>
       </a>
     </div>
@@ -66,7 +67,7 @@
           <p>No te quedes con dudas, descubre el significado de cada detalle.</p>
           <p>Solicita cita previa y reserva el tiempo que necesites.</p>
         </b>
-        <button class="boton boton-1" href="./form.html" onclick="irAFormulario()"><b>Reservar Cita</b></button>
+        <button class="boton boton-1" href="./form.html" onclick="irAFormulario('suenos')"><b>Reservar Cita</b></button>
       </section>
       <a class="enlaceAncho" href="./form.html">
         <section>
@@ -75,6 +76,7 @@
           <p>Atención directa, a través de videollamada.</p>
           <p>No te quedes con dudas, descubre el significado de cada detalle.</p>
           <p>Solicita cita previa y reserva el tiempo que necesites.</p></b>
+          <button class="boton boton-1" href="./form.html" onclick="irAFormulario('suenos')"><b>Reservar Cita</b></button>
         </section>
       </a>
     </div>
@@ -84,6 +86,10 @@
         <img src="./convocando-con-varita-2.bmp" alt="Imagen de persona durmiendo sobre una nube." id="suenos"><br /><b>
         <p>Este sitio está en construcción, por lo que próximamente, encontrarás más servicios y productos.</p></b><br>
       </section>
+    </div>
+    <div class="elem elem-pie">
+      <a href="./condiciones.html">Condiciones del servicio</a>
+      <a href="./privacidad.html">Política de privacidad</a>
     </div>
   </div>
 </body>
