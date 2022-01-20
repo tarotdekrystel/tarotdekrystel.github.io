@@ -85,7 +85,11 @@
     padding: 0;
   }
 
-  .boton {
+  .aviso {
+    text-align: center;
+  }
+
+ .boton {
     width: 50%;
     padding: 1%;
     background-color: purple;
