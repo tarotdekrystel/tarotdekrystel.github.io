@@ -18,8 +18,11 @@ Jobs:
     runs-on: ubuntu-latest
 # A continuación, comienza la sección de pasos; donde se definen los diferentes pasos, a ejecutar en este flujo:
     steps:
-# Si se usa una acción, de GitHub Actions; se puede indicar, siguiendo el siguiente formato:
+# Si se usa una acción, copiada en tu repositorio o creada por tí; se indica, siguiendo el siguiente formato:
       - uses: actions/nombreDeLaAccion@version
+# Si se usa una acción, ubicada en un repositorio, que no es tuyo; se indica, siguiendo el siguiente formato:
+# El siguiente ejemplo, ejecuta una acción de GitHub, llamada "Hello-world-action".
+      - uses: ./.github/actions/hello-world-action
 # Si se usa un paso propio, lo primero que se indica, es el nombre del paso:
       - name: Nombre del paso
 # A continuación, se definen las acciones, que ejecuta este paso:
