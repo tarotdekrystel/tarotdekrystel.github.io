@@ -1,0 +1,30 @@
+# Los archivos ".yml" y ".yaml"; sirven para codificar, flujos de trabajo, que se ejecutan en el servidor.
+# Al igual que esta y ls anterior, una linea que conmienza por almohadilla, se considera un comentario.
+# Aunque es opcional; es recomendable, que todo trabajo, comience por un nombre:
+name: Nombre del flujo de trabajo
+
+# A continuación, para que se inicie la ejecución del trabajo; hay que definir, el evento o los eventos, con que se activa:
+# El ejemplo a continuación, es un evento de solicitud, del cliente al servidor (get).
+on: get
+
+# A continuación, comienza la sección de trabajos; donde de define el entorno de ejecución y los  diferentes pasos a ejecutar:
+Jobs:
+# Cada trabajo a ejecutar, se invoca por su nombre:
+  nombre-trabajo:
+# Se le puede asignar un nombre, que permita usar espacios:
+    name: Nombre del trabajo
+# Hay que definir, en qué tipo de servidor, queremos que se ejecute:
+# El siguiente ejemplo indica, que la ejecución se debe realizar, en la útilma versión de Linux Ubuntu (ubuntu-latest).
+    runs-on: ubuntu-latest
+# A continuación, comienza la sección de pasos; donde se definen los diferentes pasos, a ejecutar en este flujo:
+    steps:
+# Si se usa una acción, de GitHub Actions; se puede indicar, siguiendo el siguiente formato:
+      - uses: actions/nombreDeLaAccion@version
+# Si se usa un paso propio, lo primero que se indica, es el nombre del paso:
+      - name: Nombre del paso
+# A continuación, se definen las acciones, que ejecuta este paso:
+# En el siguiente ejemplo, define una variable de entorno; y luego muestra su valor, en la consola de comandos.
+        env:
+          NOMBRE_VARIABLE: Hola. Este es el texto, contenido en la variable.
+        run: |
+          echo $NOMBRE_VARIABLE
