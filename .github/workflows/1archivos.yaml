@@ -1,0 +1,104 @@
+# ARCHIVOS DE FLUJO DE TRABAJO:
+# COPIAR ENLACE DE ARCHIVOS YAML
+# Los archivos ".yml" y ".yaml"; sirven para codificar, flujos de trabajo, que se ejecutan en el servidor.
+
+# COMENTARIOS:
+# Al igual que esta y ls anterior, una linea que conmienza por almohadilla, se considera un comentario.
+# Aunque es opcional; es recomendable, que todo trabajo, comience por un nombre:
+name: Nombre del flujo de trabajo
+
+# ESTRUCTURA BÁSICA DE UN PROGRAMA YAML:
+# A continuación, para que se inicie la ejecución del trabajo; hay que definir, el evento o los eventos, con que se activa:
+# El ejemplo a continuación, es un evento de solicitud, del cliente al servidor (get).
+on: get
+
+# A continuación, comienza la sección de trabajos; donde de define el entorno de ejecución y los  diferentes pasos a ejecutar:
+Jobs:
+# Cada trabajo a ejecutar, se invoca por su nombre:
+  nombre-trabajo-1:
+# Se le puede asignar un nombre, que permita usar espacios:
+    name: Nombre del trabajo
+# Hay que definir, en qué tipo de servidor, queremos que se ejecute:
+# El siguiente ejemplo indica, que la ejecución se debe realizar, en la útilma versión de Linux Ubuntu (ubuntu-latest).
+    runs-on: ubuntu-latest
+# A continuación, comienza la sección de pasos; donde se definen los diferentes pasos, a ejecutar en este flujo:
+    steps:
+
+# PASOS Y ACCIONES:
+# COPIAR ENLACE DE PASOS
+# Acciones: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#overview
+# 1- Lo primero que se indica, al definir un paso, es su nombre:
+      - name: Nombre del paso # A continuación, se definen las acciones, que ejecuta este paso.
+# 2- Puedes ejecutar comandos, del sistema operativo:
+      - name: Paso de ejecución de comandos
+        env: # Definición de la variable de entorno "NOMBRE_VARIABLE":
+          NOMBRE_VARIABLE: Hola. Este es el texto, contenido en la variable.
+        run: | # Impresión en la consola de comandos, del contenido, de la variable "NOMBRE_VARIABLE":
+          echo $NOMBRE_VARIABLE
+# 3- Puedes ejecutar un programa, que tengas en tu repositorio, como un paso del flujo de trabajo:
+# En el siguiente ejemplo, se ejecuta el programa "ejemplo.sh", ubicado en la carpeta "directorio".
+      - name: Paso de ejecución de programa # Nombre del paso
+        run: ./directorio/ejemplo.sh
+        shell: bash
+# 4- Si se usa una acción, copiada en tu repositorio o creada por tí; se indica, siguiendo el siguiente formato:
+      - uses: actions/nombreDeLaAccion@version # A continuación, se definen las acciones que ejecuta este paso.
+# 5- Si se usa una acción, ubicada en un repositorio ajeno, se indica con el siguiente formato:
+# El siguiente ejemplo, ejecuta una acción de GitHub, llamada "Hello-world-action".
+      - uses: ./.github/actions/hello-world-action # A continuación, se definen las acciones, que ejecuta este paso.
+# Dentro de cada paso o acción, se pueden añadir instrucciones, que complementen su correcta ejecución.
+
+# VARIABLES DE ENTORNO:
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables#about-environment-variables
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+# Una de las cosas, que se pueden manejar, con pasos y acciones. Distinguen entre Mayúsculas y minúsculas.
+# Los comandos de las acciones y programas; pueden crearlas, leerlas y modificarlas; o se pueden gestionar manualmente.
+# Las variables de entorno personalizadas, se deben especificar, en el archivo de flujo de trabajo.
+# Las variables personalizadas, pueden ser de tres tipos; para un paso, para un trabajo o para un flujo de trabajo.
+# 1- Ejemplo de variable personalizada, para un paso concreto:
+        jobs.id_del_trabajo.steps[numPaso].env:
+          variable_de_paso: Valor de la variable de paso.
+# 2- Ejemplo de variable personalizada, para un trabajo concreto:
+        jobs.id_del_trabajo.env:
+          Variable_de_Trabajo: Valor de la variable de trabajo.
+# 3- Ejemplo de variable personalizada, para un flujo de trabajo:
+        env:
+          VARIABLE_DE_FLUJO: Valor de la variable, del flujo de trabajo.
+# 4- También hay variables de entorno predeterminadas. Aluden a GitHub, al entorno de ejecución y a CI.
+# Hay tres variables predeterminadas, muy importantes; se crean, al iniciar un flujo de trabajo y lo identifican.
+# Permiten interactuar, con un flujo de trabajo concreto. Son "GITHUB_TOKEN", "GITHUB_SHA" y "GITHUB_REF".
+
+# EXPRESIONES:
+# https://docs.github.com/en/actions/learn-github-actions/expressions#about-expressions
+# Se pueden guardar expresiones, en forma de variables.
+# Pueden contener valores literales, referencias de contexto y funciones; independientes o combinados con operadores.
+# Las expresiones se definen, siguiendo el formato: ${{ expresión }}.
+# La siguiente expresión de ejemplo, guarda la fórmula de la gravedad, como una variable de entorno.
+      - name: Expresiones
+        env:
+          fuerzaGravedad: ${{ G * M1 * M2 / r^2 }}
+
+# ARTEFACTOS:
+
+# CONTEXTOS:
+# https://docs.github.com/en/actions/learn-github-actions/contexts#about-contexts
+# Puedes acceder, a información de utilidad, de diferentes contextos.
+# Aparte del contexto "secrets", falta completar los demás:
+# Contexto "env":
+# Contexto "github":
+# Contexto "inputs":
+# Contexto "job":
+# Contexto "matrix":
+# Contexto "needs":
+# Contexto "runner":
+# Contexto "secrets":
+# Contiene los nombres y valores, de los secretos disponibles, para la ejecución de un flujo de trabajo.
+# Los secretos pueden ser de contexto (secrets), Tokens de GitHub (secrets.GITHUB_TOKEN) o específicos (secrets.nombre).
+      - uses: actions/mi_accion
+        with:
+          token-asignado: ${{ secrets.tokenApi }}
+# Contexto "steps":
+# Contexto "strategy":
+
+# FUNCIONES DE VERIFICACIÓN DE ESTADO:
+# https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions
+# Puedes ejecutar verificaciones de estado.
