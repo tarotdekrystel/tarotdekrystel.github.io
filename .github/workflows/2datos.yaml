@@ -1,0 +1,35 @@
+# En GitHub, hay varias formas posibles, de compartir datos entre procesos.
+# Se dividen en tres grupos principales: variables de entorno, expresiones y artefactos.
+
+# 1- VARIABLES DE ENTORNO:
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables#about-environment-variables
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+# Una de las cosas, que se pueden manejar, con pasos y acciones. Distinguen entre Mayúsculas y minúsculas.
+# Los comandos de las acciones y programas; pueden crearlas, leerlas y modificarlas; o se pueden gestionar manualmente.
+# Las variables de entorno personalizadas, se deben especificar, en el archivo de flujo de trabajo.
+# Las variables personalizadas, pueden ser de tres tipos; para un paso, para un trabajo o para un flujo de trabajo.
+# 1.1- Ejemplo de variable personalizada, para un paso concreto:
+        jobs.id_del_trabajo.steps[numPaso].env:
+          variable_de_paso: Valor de la variable de paso.
+# 1.2- Ejemplo de variable personalizada, para un trabajo concreto:
+        jobs.id_del_trabajo.env:
+          Variable_de_Trabajo: Valor de la variable de trabajo.
+# 1.3- Ejemplo de variable personalizada, para un flujo de trabajo:
+        env:
+          VARIABLE_DE_FLUJO: Valor de la variable, del flujo de trabajo.
+# 1.4- También hay variables de entorno predeterminadas. Aluden a GitHub, al entorno de ejecución y a CI.
+# Hay tres variables predeterminadas, muy importantes; se crean, al iniciar un flujo de trabajo y lo identifican.
+# Permiten interactuar, con un flujo de trabajo concreto. Son "GITHUB_TOKEN", "GITHUB_SHA" y "GITHUB_REF".
+
+# 2- EXPRESIONES:
+# https://docs.github.com/en/actions/learn-github-actions/expressions#about-expressions
+# Se pueden guardar expresiones, en forma de variables.
+# Pueden contener valores literales, referencias de contexto y funciones; independientes o combinados con operadores.
+# Las expresiones se definen, siguiendo el formato: ${{ expresión }}.
+# La siguiente expresión, guarda la fórmula, de atracción gravitatoria entre dos cuerpos, como una variable de entorno.
+      - name: Expresiones
+        env:
+          fuerzaGravedad: ${{ G * M1 * M2 / r^2 }}
+
+# 3- ARTEFACTOS:
+# https://docs.github.com/en/actions/advanced-guides/storing-workflow-data-as-artifacts#about-workflow-artifacts
