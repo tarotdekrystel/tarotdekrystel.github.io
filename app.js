@@ -206,12 +206,13 @@ function quitarHoyYAnteriores() {
 }
 
 function semanaActual() {
-  var solicitud = new XMLHttpRequest();
-  solicitud.onload = function() {
-    decodificarRespuesta(this.responseText);
-  }
-  solicitud.open("GET", "./README.md");
-  solicitud.send();
+//  var solicitud = new XMLHttpRequest();
+//  solicitud.onload = function() {
+//    decodificarRespuesta(this.responseText);
+//  }
+//  solicitud.open("GET", "./README.md");
+//  solicitud.send();
+  console.log("Descomentar la función, para activar la comuniciación con el servidor.");
 }
 
 function semanaAnterior() {
