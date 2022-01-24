@@ -179,6 +179,10 @@ function cookieLeer() {
   return 0;
 }
 
+function decodificarRespuesta(respuesta) {
+  console.log("La respuesta es:" + respuesta);
+}
+
 function enviarForm() {
   return 0;
 }
