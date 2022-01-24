@@ -24,6 +24,10 @@ var cookies = document.cookie;
 var cookieSemana;
 var cookieServicio;
 
+function ajustarCasillasCitas() {
+  return 0;
+}
+
 function ajustarDiferenciaHoraria() {
   fechaTarotHoy.setFullYear(fechaUsuarioHoy.getFullYear(), fechaUsuarioHoy.getMonth(), fechaUsuarioHoy.getDate());
   fechaTarotHoy.setHours(fechaUsuarioHoy.getHours() + diferenciaHoras);
@@ -198,7 +202,12 @@ function quitarHoyYAnteriores() {
 }
 
 function semanaActual() {
-  return 0;
+  var solicitud = new XMLHttpRequest();
+  solicitud.onload = function() {
+    decodificarRespuesta(this.responseText);
+  }
+  solicitud.open("GET", "./README.md");
+  solicitud.send();
 }
 
 function semanaAnterior() {
