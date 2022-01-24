@@ -179,7 +179,7 @@ function cookieLeer() {
   return 0;
 }
 
-function decodificarRespuesta(respuesta) {
+function mostrarRespuesta(respuesta) {
   console.log("La respuesta es: " + respuesta);
 }
 
@@ -208,7 +208,7 @@ function quitarHoyYAnteriores() {
 function semanaActual() {
 //  var solicitud = new XMLHttpRequest();
 //  solicitud.onload = function() {
-//    decodificarRespuesta(this.responseText);
+//    mostrarRespuesta(this.responseText);
 //  }
 //  solicitud.open("GET", "./README.md");
 //  solicitud.send();
