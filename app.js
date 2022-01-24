@@ -180,7 +180,7 @@ function cookieLeer() {
 }
 
 function decodificarRespuesta(respuesta) {
-  console.log("La respuesta es:" + respuesta);
+  console.log("La respuesta es: " + respuesta);
 }
 
 function enviarForm() {
