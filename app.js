@@ -180,6 +180,7 @@ function cookieLeer() {
 }
 
 function decodificarRespuesta(respuesta) {
+  alert("Tenemos enlace con el servidor.");
   console.log("La respuesta es: " + respuesta);
 }
 
