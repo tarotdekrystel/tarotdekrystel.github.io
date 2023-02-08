@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Videncia, magia y espiritualidad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="José María Caamaño González">
+  <title>TAROT DE KRYSTEL</title>
+  <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="./Tarot de Krystel.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./app.js"></script>
+</head>
+
+<body onload="cookieComprobarHabilitado()">
+  <div class="cont">
+    <div class="elem elem-cab">
+      <header>
+        <img src="sol_transparente.png" alt="Imagen del Sol" id="sol" />
+        <img src="luna_transparente.png" alt="Imagen de la Luna" id="luna" />
+        <h1>TAROT DE KRYSTEL</h1>
+        <p><b>Tu web de videncia; donde descubrirás lo que te depara el futuro.</b></p>
+      </header>
+    </div>
+    <div class="elem elem-nav">
+      <nav>
+        <button class="boton" id="menu" onclick="menu()"><b>Menú</b></button>
+        <div class="menuC" id="enlaces">
+          <ul><b>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./astrologia.html">Astrología</a></li>
+            <li id="actual"><a href="./tarot.html">Tarot</a></li>
+            <li><a href="./contactar.html">Contactar</a></li>
+            </b></ul>
+        </div>
+      </nav>
+    </div>
+    <div class="publi publi-i">
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="https://www.casadellibro.com.co/ebook-sistema-metodico-de-preguntas-ebook/9788418234354/11483075">
+          <article class="anuncio">
+            <img src="https://kbimages1-a.akamaihd.net/7037714b-b752-413f-b97f-d210c7391dad/1200/1200/False/sistema-metodico-de-preguntas.jpg" style="width: 70%; margin-left: 15%;">
+          </article>
+        </a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+    </div>
+    <div class="elem elem-1-g">
+      <section class="sinEnlace">
+        <h3><b>RESERVA CITA PARA TAROT</b></h3>
+        <b>
+          <p>Consulta de Tarot en directo, a través de videollamada.</p>
+          <p>No te quedes con dudas, resuélvelas durante la consulta.</p>
+          <p>Solicita cita previa y reserva el tiempo que necesites.</p>
+        </b>
+        <button class="boton boton-1" href="./form.html" onclick="irAFormulario('suenos')"><b>Reservar Cita</b></button>
+      </section>
+      <section style="padding: 3%;">
+        <h3>RESERVAR CONSULTA DE TAROT</h3>
+        <article style="width: 14%; display: inline-block; margin-left: 5%">
+          <img src="./tarot.jpg" width="100%">
+        </article>
+        <article style="width: 60%; display: inline-block; margin-left: 5%;">
+          <b>
+            <p>Consulta de Tarot en directo, a través de videollamada.</p>
+            <p>No te quedes con dudas, resuélvelas durante la consulta.</p>
+            <p>Solicita cita previa y reserva el tiempo que necesites.</p>
+          </b>
+        </article>
+        <form rel="external noreferrer nofollow" action="" target="" method="post" enctype="multipart/form-data" onsubmit="">
+          <label class="enunc enunc-1"><b>DATOS PERSONALES:</b></label><br>
+          <table class="datos">
+            <tr>
+              <th>Nombre/s</th>
+              <td><input type="text" id="nombre" name="nombre"></td>
+            </tr>
+            <tr>
+              <th>Apellido/s</th>
+              <td><input type="text" id="apellido" name="apellido"></td>
+            </tr>
+            <tr>
+              <th>Fecha de Nacimiento</th>
+              <td><input type="date" id="nacim" name="nacim"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td><input type="email" id="email" name="email"></td>
+            </tr>
+          </table>
+          <label class="enunc enunc-1" for="fechaConsulta"><b>SEMANA MOSTRADA:</b></label><br>
+          <div class="semana"><p><b id="semana">Lunes - Domingo</b></p></div>
+          <button class="boton boton-inactivo" id="botonAnterior" type="button" name="anterior" value="Anterior"
+            onclick="semanaAnterior()"><b>Anterior</b></button>
+          <button class="boton boton-inactivo" id="botonActual" type="button" name="actual" value="Actual"
+            onclick="semanaActual()"><b>Actual</b></button>
+          <button class="boton" id="botonSiguiente" type="button" name="siguiente" value="Siguiente"
+            onclick="semanaSiguiente()"><b>Siguiente</b></button>
+          <label class="enunc enunc-1" id="tiare"><b>TIEMPO A RESERVAR:</b></label><br>
+          <table>
+            <tr>
+              <th class="tithor">De - A</th>
+              <th>L</th>
+              <th>M</th>
+              <th>X</th>
+              <th>J</th>
+              <th>V</th>
+              <th>S</th>
+              <th>D</th>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-1">17:00 - 17:15</th>
+              <td class=""><input type="checkbox" id="selec101" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec201" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec301" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec401" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec501" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec601" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec701" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-2">17:15 - 17:30</th>
+              <td><input type="checkbox" id="selec102" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec202" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec302" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec402" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec502" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec602" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec702" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-3">17:30 - 17:45</th>
+              <td><input type="checkbox" id="selec103" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec203" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec303" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec403" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec503" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec603" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec703" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-4">17:45 - 18:00</th>
+              <td><input type="checkbox" id="selec104" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec204" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec304" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec404" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec504" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec604" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec704" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-5">18:00 - 18:15</th>
+              <td><input type="checkbox" id="selec105" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec205" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec305" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec405" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec505" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec605" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec705" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-6">18:15 - 18:30</th>
+              <td><input type="checkbox" id="selec106" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec206" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec306" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec406" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec506" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec606" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec706" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-7">18:30 - 18:45</th>
+              <td><input type="checkbox" id="selec107" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec207" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec307" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec407" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec507" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec607" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec707" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-8">18:45 - 19:00</th>
+              <td><input type="checkbox" id="selec108" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec208" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec308" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec408" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec508" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec608" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec708" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-9">19:00 - 19:15</th>
+              <td><input type="checkbox" id="selec109" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec209" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec309" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec409" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec509" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec609" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec709" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-10">19:15 - 19:30</th>
+              <td><input type="checkbox" id="selec110" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec210" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec310" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec410" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec510" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec610" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec710" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-11">19:30 - 19:45</th>
+              <td><input type="checkbox" id="selec111" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec211" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec311" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec411" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec511" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec611" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec711" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-12">19:45 - 20:00</th>
+              <td><input type="checkbox" id="selec112" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec212" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec312" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec412" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec512" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec612" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec712" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-13">20:00 - 20:15</th>
+              <td><input type="checkbox" id="selec113" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec213" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec313" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec413" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec513" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec613" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec713" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-14">20:15 - 20:30</th>
+              <td><input type="checkbox" id="selec114" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec214" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec314" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec414" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec514" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec614" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec714" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-15">20:30 - 20:45</th>
+              <td><input type="checkbox" id="selec115" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec215" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec315" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec415" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec515" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec615" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec715" name="Dia7" value="1"></td>
+            </tr>
+            <tr>
+              <th class="horas" id="hora-16">20:45 - 21:00</th>
+              <td><input type="checkbox" id="selec116" name="Dia1" value="1"></td>
+              <td><input type="checkbox" id="selec216" name="Dia2" value="1"></td>
+              <td><input type="checkbox" id="selec316" name="Dia3" value="1"></td>
+              <td><input type="checkbox" id="selec416" name="Dia4" value="1"></td>
+              <td><input type="checkbox" id="selec516" name="Dia5" value="1"></td>
+              <td><input type="checkbox" id="selec616" name="Dia6" value="1"></td>
+              <td><input type="checkbox" id="selec716" name="Dia7" value="1"></td>
+            </tr>
+          </table>
+          <div class="enviar">
+            <button class="boton boton-enviar" type="button" onclick="enviarForm()" form="" formaction=""><b>Enviar</b></button>
+          </div>
+          <label for="publi">Acepto recibir promociones y publicaciones de Tarot de Krystel.</label>
+          <input type="checkbox" id="publi" name="publi" value="true" checked>
+        </form>
+      </section>
+    </div>
+    <div class="publi publi-d">
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="https://sites.google.com/view/naturopatiacaamanio/inicio?pli=1">
+          <p style="text-align: center; margin-top: 0%;"><b>Terapias Naturales</b></p>
+          <img src="./iconocaamanio.png" alt="Publicidad" style="width: 70%; margin-left: 17%;">
+        </a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 8%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+    </div>
+    <div class="elem elem-pie">
+      <a href="./condiciones.html">Condiciones del servicio</a>
+      <a href="./privacidad.html">Política de privacidad</a>
+    </div>
+  </div>
+</body>
+
+</html>

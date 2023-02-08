@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Videncia, magia y espiritualidad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="José María Caamaño González">
+  <title>TAROT DE KRYSTEL</title>
+  <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="./Tarot de Krystel.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./app.js"></script>
+</head>
+
+<body onload="cargarFormulario()">
+  <div class="cont">
+    <div class="elem elem-cab">
+      <header>
+        <img src="sol_transparente.png" alt="Imagen del Sol" id="sol" />
+        <img src="luna_transparente.png" alt="Imagen de la Luna" id="luna" />
+        <h1>TAROT DE KRYSTEL</h1>
+        <p><b>Tu web de videncia; donde descubrirás lo que te depara el futuro.</b></p>
+      </header>
+    </div>
+    <div class="elem elem-nav">
+      <nav>
+        <button class="boton" id="menu" onclick="menu()"><b>Menú</b></button>
+        <div class="menuC" id="enlaces">
+          <ul><b>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./astrologia.html">Astrología</a></li>
+            <li><a href="./tarot.html">Tarot</a></li>
+            <li><a href="./contactar.html">Contactar</a></li>
+            </b></ul>
+        </div>
+      </nav>
+    </div>
+    <div class="publi publi-i">
+      <section style="height: 11%; border: 1px solid #000000; padding: 1%; margin-bottom: 2%;">
+        <a href="https://www.casadellibro.com.co/ebook-sistema-metodico-de-preguntas-ebook/9788418234354/11483075">
+          <article class="anuncio">
+            <img src="https://kbimages1-a.akamaihd.net/7037714b-b752-413f-b97f-d210c7391dad/1200/1200/False/sistema-metodico-de-preguntas.jpg" style="width: 70%; margin-left: 15%;">
+          </article>
+        </a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+    </div>
+    <div class="elem elem-form">
+      <section>
+        <h3><b>Publica Tu Anuncio</b></h3><br class="salto">
+        <p style="margin: 2%;"><b>Contacta con nuestro administrador web, a través de este formulario, para solicitar la publicación de tu anuncio, en este sitio web y en otras páginas asociadas.</b></p>
+        <form rel="external noreferrer nofollow" action="" target="" method="post" enctype="multipart/form-data" onsubmit="">
+          <label class="enunc enunc-1"><b>DATOS PERSONALES:</b></label><br>
+          <table class="datos">
+            <tr>
+              <td><b>Nombre/s (obligatorio)</b></td>
+              <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+              <td><b>Apellido/s (obligatorio)</b></td>
+              <td><input type="text" id="apellido" name="apellido" required></td>
+            </tr>
+            <tr>
+              <td><b>Email (obligatorio)</b></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><b>País (obligatorio)</b></td>
+              <td><input type="text" id="pais" name="pais" required></td>
+            </tr>
+          </table>
+          <label class="enunc enunc-1"><b>DATOS DEL ANUNCIO:</b></label><br>
+          <table class="datos">
+            <tr>
+              <td><b>Imagen (obligatorio)</b></td>
+              <td><input type="file" id="foto" name="foto" required></td>
+            </tr>
+            <tr>
+              <td><b>Enlace Web (obligatorio)</b></td>
+              <td><input type="url" id="foto" name="foto" required></td>
+            </tr>
+            <tr>
+              <td><b>Título (opcional)</b></td>
+              <td><input type="text" id="titulo" name="titulo"></td>
+            </tr>
+          </table>
+          <label class="enunc enunc-1"><b>SERVICIO A CONTRATAR:</b></label>
+          <table class="servicio">
+            <tr>
+              <td class="serv-nombre"><b>Imagen 1 Semana (30 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Tarot" name="Servicio" value="1"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Título e Imagen 1 Semana (35 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Sueno" name="Servicio" value="2"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Imagen 1 Mes (110 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Tarot" name="Servicio" value="3"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Título e Imagen 1 Mes (120 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Sueno" name="Servicio" value="4"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Imagen 1 Trimestre (300 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Tarot" name="Servicio" value="5"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Título e Imagen 1 Trimestre (330 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Sueno" name="Servicio" value="6"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Imagen 1 Año (1100 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Tarot" name="Servicio" value="7"></td>
+            </tr>
+            <tr>
+              <td class="serv-nombre"><b>Título e Imagen 1 semana (1200 €)</b></td>
+              <td class="serv-caja"><input class="caja" type="radio" id="Sueno" name="Servicio" value="8"></td>
+            </tr>
+          </table>
+          <div class="enviar">
+            <button class="boton boton-enviar" type="button" onclick="enviarForm()" form="" formaction=""><b>Siguiente</b></button>
+          </div>
+          <table>
+            <tr>
+              <td class="serv-nombre">Acepto recibir promociones y publicaciones de Tarot de Krystel.</td>
+              <td class="serv-caja"><input type="checkbox" id="publi" name="publi" value="true" checked></td>
+            </tr>
+          </table>
+        </form>
+        <article style="margin-left: 5%; margin-bottom: 2%;">
+          <a href="#">Términos y Condiciones de Uso del Servicio de Publicidad</a><br><br>
+          <a href="#">Sitio Web del Administrador</a>
+        </article>
+      </section>
+    </div>
+    <div class="publi publi-d">
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="https://sites.google.com/view/naturopatiacaamanio/inicio?pli=1">
+          <p style="text-align: center; margin-top: 0%;"><b>Terapias Naturales</b></p>
+          <img src="./iconocaamanio.png" alt="Publicidad" style="width: 70%; margin-left: 17%;">
+        </a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 12%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+    </div>
+    <div class="elem elem-pie">
+      <a href="./condiciones.html">Condiciones del servicio</a>
+      <a href="./privacidad.html">Política de privacidad</a>
+    </div>
+  </div>
+</body>
+
+</html>
