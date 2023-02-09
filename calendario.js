@@ -8,7 +8,7 @@ const clientId = ;
 */
 
 fetch('${urlApi}${urlEventos}')
-  .then(respuesta => document.getElementById("resp").innerText = respuesta.json())
+  .then(respuesta => document.getElementById("resp").innerText = respuesta)
   .catch(error => document.getElementById("resp").innerText = error)
 
 /* MODELO DE RESPUESTA DE LISTA DE EVENTOS:
