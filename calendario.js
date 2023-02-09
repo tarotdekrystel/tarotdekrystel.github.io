@@ -4,5 +4,5 @@ const urlEventos = '/calendars/${idCalendario}';
 
 fetch(urlApi + urlEventos)
   .then(objeto => JSON.stringify(objeto))
-  .then(respuesta => document.getElementById("resp").innerHTML = respuesta)
+  .then(respuesta => document.getElementById("resp").innerText = respuesta)
   .catch(error => document.getElementById("resp").innerText = error)
