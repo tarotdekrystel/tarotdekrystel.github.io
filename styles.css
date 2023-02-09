@@ -236,6 +236,10 @@
     display: none;
   }
 
+  .form-g {
+    display: none;
+  }
+
   .menuA {
     display: block;
   }
@@ -728,6 +732,10 @@
     width: 100%;
     float: left;
     object-fit: contain;
+  }
+
+  .form-p {
+    display: none;
   }
 
   .horas {
