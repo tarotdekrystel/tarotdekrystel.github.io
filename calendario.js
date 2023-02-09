@@ -7,7 +7,7 @@ const apiKey = ;
 const clientId = ;
 */
 
-fetch('${urlApi}${urlEventos}')
+fetch(urlApi + urlEventos)
   .then(respuesta => document.getElementById("resp").innerText = respuesta)
   .catch(error => document.getElementById("resp").innerText = error)
 
