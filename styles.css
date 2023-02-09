@@ -244,6 +244,14 @@
     display: none;
   }
 
+  .publi-d {
+    display: none;
+  }
+
+  .publi-i {
+    display: none;
+  }
+
   .salto {
     display: none;
   }
@@ -741,16 +749,16 @@
     border: solid white 2px;
   }
 
+  .publi-d {
+    grid-column: 54 / 62;
+    padding: 2%;
+    background-color: #ffffff;
+  }
+
   .publi-i {
     grid-column: 1 / 8;
     padding: 2%;
     height: 94%;
-    background-color: #ffffff;
-  }
-
-  .publi-d {
-    grid-column: 54 / 62;
-    padding: 2%;
     background-color: #ffffff;
   }
 
