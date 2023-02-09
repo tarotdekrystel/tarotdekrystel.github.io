@@ -3,6 +3,6 @@ const idCalendario = '3700b740e4fa27ac19f134c56f08a1f4ea82c5ef458a27be640fedb246
 const urlEventos = '/calendars/${idCalendario}';
 
 fetch(urlApi + urlEventos)
-  .then(objeto => JSON.parse(objeto))
+  .then(objeto => JSON.stringify(objeto))
   .then(respuesta => document.getElementById("resp").innerHTML = respuesta)
   .catch(error => document.getElementById("resp").innerText = error)
