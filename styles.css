@@ -286,11 +286,6 @@
     margin-bottom: 1%;
   }
 
-  #caldero {
-    width: 100%;
-    object-fit: contain;
-  }
-
   #descripcion {
     text-align: center;
   }
@@ -316,17 +311,17 @@
     width: 21%;
   }
 
-  #suenos {
-    width: 100%;
-    object-fit: contain;
-    margin-top: 7%;
-    margin-bottom: 4%;
-  }
-
   #tarot {
     width: 100%;
     object-fit: contain;
   }
+}
+
+#zodiaco {
+  width: 100%;
+  object-fit: contain;
+  margin-top: 7%;
+  margin-bottom: 4%;
 }
 
 @media only screen and (min-width: 927px) {
@@ -489,6 +484,7 @@
   }
 
   .elem a section {
+    margin: 0%;
     padding: 6%;
   }
 
@@ -505,25 +501,53 @@
   }
 
   .elem a section:hover {
-    margin: 0;
-    padding: 4%;
+    width: 99%;
+    margin: 0%;
+    padding: 2%;
     border: solid purple 2px;
     border-radius: 15px;
   }
 
+  .elem-1-g {
+    grid-column: 12 / 50;
+    height: 94%;
+    padding: 0.5%;
+  }
+
   .elem-2-i {
-    grid-column: 9 / 27;
+    grid-column: 11 / 29;
     padding: 3%;
   }
 
   .elem-2-d {
-    grid-column: 35 / 53;
+    grid-column: 33 / 51;
+    padding: 3%;
+  }
+
+  .elem-2-p {
+    grid-column: 1 / 19;
+    padding: 3%;
+  }
+
+  .elem-2-g {
+    grid-column: 20 / 62;
+    height: 96.5%;
+    padding: 0.5%;
+  }
+
+  .elem-3-i {
+    grid-column: 1 / 19;
     padding: 3%;
   }
 
   .elem-3-c {
     grid-column: 22 / 40;
-    padding: 6%;
+    padding: 3%;
+  }
+
+  .elem-3-d {
+    grid-column: 43 / 62;
+    padding: 3%;
   }
 
   .elem-cab {
@@ -709,6 +733,47 @@
     display: block;
   }
 
+  .publi {
+    width: 99%;
+    height: 94%;
+    margin: 0%;
+    padding: 2%;
+    border: solid white 2px;
+  }
+
+  .publi-i {
+    grid-column: 1 / 8;
+    padding: 2%;
+    height: 94%;
+    background-color: #ffffff;
+  }
+
+  .publi-d {
+    grid-column: 54 / 62;
+    padding: 2%;
+    background-color: #ffffff;
+  }
+
+  .redes {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .redes img {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .redes p {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .redes article:hover {
+    border-radius: 10px;
+    border: 2px solid purple;
+  }
+
   .servicio {
     width: 100;
     object-fit: contain;
@@ -747,11 +812,6 @@
     margin-left: 6.25%;
   }
 
-  #caldero {
-    width: 100%;
-    object-fit: contain;
-  }
-
   #luna {
     float: right;
     margin-right: 2%;
@@ -772,16 +832,16 @@
     justify-self: left;
   }
 
-  #suenos {
-    width: 100%;
-    object-fit: contain;
-    margin-top: 15%;
-    margin-bottom: 23%;
-  }
-
   #tarot {
     width: 100%;
     object-fit: contain;
     margin-bottom: 5%;
+  }
+
+  #zodiaco {
+    width: 100%;
+    object-fit: contain;
+    margin-top: 0%;
+    margin-bottom: 3%;
   }
 }
