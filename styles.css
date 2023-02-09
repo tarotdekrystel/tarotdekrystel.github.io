@@ -526,6 +526,12 @@
     padding: 0.5%;
   }
 
+  .elem-1-m {
+    grid-column: 22 / 40;
+    height: 94%;
+    padding: 0.5%;
+  }
+
   .elem-2-i {
     grid-column: 11 / 29;
     padding: 3%;
