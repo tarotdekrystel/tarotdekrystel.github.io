@@ -11,6 +11,16 @@
   <link rel="icon" type="image/x-icon" href="./Tarot de Krystel.jpg">
   <link rel="stylesheet" href="styles.css">
   <script src="./app.js"></script>
+  <script>
+    function cargarEmail() {
+      let remitente = document.getElementById().value;
+      let asunto = document.getElementById().value;
+      let mensaje = document.getElementById().value;
+      let remitente = document.getElementById().value;
+      let remitente = document.getElementById().value;
+      location.href = 'mailto:tarotdekrystel@gmail.com?subject=${asunto}&body=${mensaje}';
+    }
+  </script>
 </head>
 
 <body>
@@ -36,9 +46,47 @@
         </div>
       </nav>
     </div>
-    <div class="elem elem-2-p">
+    <div class="publi publi-i">
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="https://www.casadellibro.com.co/ebook-sistema-metodico-de-preguntas-ebook/9788418234354/11483075">
+          <article class="anuncio">
+            <img src="https://kbimages1-a.akamaihd.net/7037714b-b752-413f-b97f-d210c7391dad/1200/1200/False/sistema-metodico-de-preguntas.jpg" style="width: 70%; margin-left: 15%;">
+          </article>
+        </a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 15%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+    </div>
+    <div class="elem elem-1-m">
       <section style="padding: 15%; padding-top: 5%;">
-        <h3><b>REDES SOCIALES</b></h3>
+        <h3><b>EMAIL Y REDES SOCIALES</b></h3>
+        <a href="mailto:tarotdekrystel@gmail.com" class="redes">
+          <article class="">
+            <table>
+              <tr>
+                <td style="margin: 0%; padding: 0%;">
+                  <img src="https://img.freepik.com/iconos-gratis/sobre_318-408141.jpg" alt="Facebook" width="30%">
+                </td>
+                <td>
+                  <p><b>Email</b></p>
+                </td>
+              </tr>
+            </table>
+          </article>
+        </a>
         <a href="#" class="redes">
           <article class="">
             <table>
@@ -139,85 +187,28 @@
         </a>
       </section>
     </div>
-    <div class="elem elem-2-g">
-      <div class="form-p">
-        <section style="padding: 3%;">
-          <h3><b>ENVIAR MENSAJE POR EMAIL</b></h3>
-          <p style="text-align: center;"><b>A la dirección: tarotdekrystel@gmail.com</b></p>
-          <form id="contacto" name="contacto" rel="noreferrer nofollow" action="mailto:tarotdekrystel@gmail.com" target="_self" method="POST" enctype="multipart/form-data">
-            <fieldset>
-              <label for="nombre">Nombre/s</label>
-              <input type="text" id="nombre" name="nombre" value="">
-            </fieldset>
-            <fieldset>
-              <label for="nombre">Apellido/s</label>
-              <input type="text" id="nombre" name="nombre" value="">
-            </fieldset>
-            <fieldset>
-              <label for="nombre">Email</label>
-              <input type="email" id="email" name="email" value="" required>
-            </fieldset>
-            <fieldset>
-              <label for="nombre">Asunto</label>
-              <input type="text" id="asunto" name="asunto" value="" required>
-            </fieldset>
-            <fieldset>
-              <label for="nombre">Adjuntar Archivos</label>
-              <input type="file" id="archivos" name="archivos" value="" multiple>
-            </fieldset>
-            <fieldset>
-              <label for="nombre">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="12" cols="30" value="" required></textarea>
-            </fieldset>
-            <div class="enviar">
-              <button class="boton boton-enviar" type="submit" form="astrologia"><b>Enviar</b></button>
-            </div>
-            <label for="publi">Acepto recibir promociones y publicaciones de "Tarot de Krystel".</label>
-            <input type="checkbox" id="publi" name="publi" value="true" checked>
-          </form>
-        </section>
-      </div>
-      <div class="form-g">
-        <section style="padding: 3%;">
-          <h3><b>ENVIAR MENSAJE POR EMAIL</b></h3>
-          <p style="text-align: center;"><b>A la dirección: tarotdekrystel@gmail.com</b></p>
-          <form id="contacto" name="contacto" rel="noreferrer nofollow" action="mailto:tarotdekrystel@gmail.com" target="_self" method="POST" enctype="multipart/form-data">
-            <label class="enunc enunc-1"><b>DATOS PERSONALES:</b></label><br>
-            <table class="datos">
-              <tr>
-                <th>Nombre/s</th>
-                <td><input type="text" id="nombre" name="nombre"></td>
-              </tr>
-              <tr>
-                <th>Apellido/s</th>
-                <td><input type="text" id="apellido" name="apellido"></td>
-              </tr>
-              <tr>
-                <th>Tu Email</th>
-                <td><input type="email" id="email" name="email" value="" required></td>
-              </tr>
-              <tr>
-                <th>Asunto</th>
-                <td><input type="text" id="subject" name="subject" value="" required></td>
-              </tr>
-              <tr>
-                <th>Adjuntar Archivos</th>
-                <td><input type="file" id="archivos" name="archivos" value="" multiple></td>
-              </tr>
-              <tr>
-                <th>Mensaje</th>
-                <td>
-                  <textarea id="body" name="body" rows="24" cols="89" value="" required></textarea>
-              </tr>
-            </table>
-            <div class="enviar">
-              <button class="boton boton-enviar" type="submit" form="astrologia"><b>Enviar</b></button>
-            </div>
-            <label for="publi">Acepto recibir promociones y publicaciones de "Tarot de Krystel".</label>
-            <input type="checkbox" id="publi" name="publi" value="true" checked>
-          </form>
-        </section>
-      </div>
+    <div class="publi publi-d">
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="https://sites.google.com/view/naturopatiacaamanio/inicio?pli=1">
+          <p style="text-align: center; margin-top: 0%;"><b>Terapias Naturales</b></p>
+          <img src="./iconocaamanio.png" alt="Publicidad" style="width: 70%; margin-left: 17%;">
+        </a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 15%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
+      <section style="height: 16%; border: 1px solid #000000; margin-bottom: 2%;">
+        <a href="./publicidad.html">Muestra tu anuncio.</a>
+      </section>
     </div>
     <div class="elem elem-pie">
       <a href="./condiciones.html">Condiciones del servicio</a>
